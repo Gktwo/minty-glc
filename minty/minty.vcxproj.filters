@@ -78,13 +78,9 @@
     <ClCompile Include="api\imgui\ImGui\imgui_stdlib.cpp" />
     <ClCompile Include="GUI\ResourceLoader.cpp" />
     <ClCompile Include="GUI\mutil.cpp" />
-    <ClCompile Include="Functions\visuals\HideUI.cpp" />
     <ClCompile Include="Functions\visuals\UnlockFPS.cpp" />
     <ClCompile Include="Functions\World\SetTimeScale.cpp" />
     <ClCompile Include="Functions\Debug\debug.cpp" />
-    <ClCompile Include="Functions\visuals\browser.cpp" />
-    <ClCompile Include="Functions\Player\GodMode.cpp" />
-    <ClCompile Include="Functions\Debug\Engine.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="gui\MainGUI.h" />
@@ -203,15 +199,9 @@
     <ClInclude Include="api\magic_enum\magic_enum.hpp" />
     <ClInclude Include="GUI\ResourceLoader.h" />
     <ClInclude Include="GUI\mutil.h" />
-    <ClInclude Include="Functions\visuals\HideUI.h" />
     <ClInclude Include="Functions\visuals\UnlockFPS.h" />
     <ClInclude Include="Functions\World\SetTimeScale.h" />
     <ClInclude Include="Functions\Debug\debug.h" />
-    <ClInclude Include="Functions\Player\GodMode.h" />
-    <ClInclude Include="Functions\visuals\browser.h" />
-    <ClInclude Include="Functions\Debug\Engine.h" />
-    <ClInclude Include="Functions\Debug\EngineFunc.hpp" />
-    <ClInclude Include="Functions\Debug\EngineUtils.hpp" />
     <ClInclude Include="il2cpp\il2cpp-enum.h" />
   </ItemGroup>
   <ItemGroup>

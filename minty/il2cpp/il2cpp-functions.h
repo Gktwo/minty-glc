@@ -1,5 +1,5 @@
 ﻿#include "il2cpp-types.h"
-#include "il2cpp-enum.h"
+//#include "il2cpp-enum.h"
 
 
 using namespace app;
@@ -7,7 +7,7 @@ using namespace app;
 
 //globalupdate
 //UnityEngine.EventSystems.EventSystem$$Update
-DO_APP_FUNC(0x024E4CF0,  void, EventSystem_Update, ( app::UnityEngine_EventSystems_EventSystem_o* __this, app::MethodInfo* method));
+DO_APP_FUNC(0x024E4CF0,  void, EventSystem_Update, ( app::EventSystem* __this, app::MethodInfo* method));
 
 
 

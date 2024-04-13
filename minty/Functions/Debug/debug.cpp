@@ -1,7 +1,7 @@
 ﻿#include "Debug.h"
 
 namespace cheat {
-	static void BattleLogic_BattleMatch__Update_HookDebug(app::BattleLogic_BattleMatch_o* __this);
+	//static void BattleLogic_BattleMatch__Update_HookDebug(app::BattleLogic_BattleMatch_o* __this);
 
 	Debug::Debug() {
 		//f_Enabled = config::getValue("functions:Debug", "enabled", false);
@@ -87,7 +87,7 @@ namespace cheat {
 		if (f_Resolutionwidth.getValue() != 0 && f_Resolutionheight.getValue() != 0)
 		{
 			app::Screen_SetResolution(f_Resolutionwidth.getValue(), f_Resolutionheight.getValue(), f_Resolutionfullscreen.getValue());
-			//The game will get stuck,How to refresh?
+		
 		}
 
 		LOG_INFO("SetResolution to %d x %d, fullscreen: %s", f_Resolutionwidth.getValue(), f_Resolutionheight.getValue(), f_Resolutionfullscreen.getValue() ? "true" : "false");

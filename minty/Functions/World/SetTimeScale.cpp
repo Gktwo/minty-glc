@@ -1,7 +1,7 @@
 ﻿#include "SetTimeScale.h"
 
 namespace cheat {
-	static void Global_Update_timescale_Hook(app::EventSystem* __this, MethodInfo* method);
+	static void Global_Update_timescale_Hook(app::EventSystem* __this, app::MethodInfo* method);
 
 	SetTimeScale::SetTimeScale() {
 		f_Enabled = config::getValue("functions:SetTimeScale", "enabled", false);
@@ -46,7 +46,7 @@ namespace cheat {
 
 
 
-	void Global_Update_timescale_Hook(app::EventSystem* __this, MethodInfo* method) {
+	void Global_Update_timescale_Hook(app::EventSystem* __this, app::MethodInfo* method) {
 		auto& SetTimeScale = SetTimeScale::getInstance();
 
 

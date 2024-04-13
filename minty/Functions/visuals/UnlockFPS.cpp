@@ -1,7 +1,7 @@
 ﻿#include "UnlockFPS.h"
 
 namespace cheat {
-	static void Global_UpdateFps_Hook(app::EventSystem* __this, MethodInfo* method);
+	static void Global_UpdateFps_Hook(app::EventSystem* __this, app::MethodInfo* method);
 
 	UnlockFPS::UnlockFPS() {
 		f_Enabled = config::getValue("functions:UnlockFPS", "enabled", false);
@@ -51,7 +51,7 @@ namespace cheat {
 		return _("Visuals");
 	}
 
-	void Global_UpdateFps_Hook(app::EventSystem* __this, MethodInfo* method) {
+	void Global_UpdateFps_Hook(app::EventSystem* __this, app::MethodInfo* method) {
 		auto& unlockFPS = UnlockFPS::getInstance();
 		bool enabled = unlockFPS.f_Enabled.getValue();
 		int fps = unlockFPS.f_Fps.getValue();

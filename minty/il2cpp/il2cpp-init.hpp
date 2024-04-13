@@ -100,21 +100,21 @@ VOID init_il2cpp() {
 			LOG_DEBUG("UnityPlayer ptr: %p", unityPlayerAddress);
 
 
-#define DO_API(a, b, c, r , n, p) n = (r (*) p)(baseAddress + a)
+#define DO_API(a, r , n, p) n = (r (*) p)(baseAddress + a)
 #include "il2cpp-api-functions.h"
 #undef DO_API
 
-#define DO_APP_FUNC(a, b, c, r, n, p) n = (r (*) p)(baseAddress + a)
+#define DO_APP_FUNC(a, r, n, p) n = (r (*) p)(baseAddress + a)
 #define DO_APP_FUNC_METHODINFO(a, n) n = (struct MethodInfo **)(baseAddress + a)
 #include "il2cpp-functions.h"
 #undef DO_APP_FUNC
 #undef DO_APP_FUNC_METHODINFO
 
-#define DO_TYPEDEF(a, b, c, n) n ## __TypeInfo = (n ## __Class**) (baseAddress + a)
+#define DO_TYPEDEF(a,  c, n) n ## __TypeInfo = (n ## __Class**) (baseAddress + a)
 #include "il2cpp-types.h"
 #undef DO_TYPEDEF
 
-#define DO_UP_FUNC(a, b, c, r, n, p) n = (r (*) p)(unityPlayerAddress + a)
+#define DO_UP_FUNC(a, r, n, p) n = (r (*) p)(unityPlayerAddress + a)
 #include "il2cpp-unityplayer-functions.h"
 #undef DO_UP_FUNC
 		}

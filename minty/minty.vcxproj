@@ -159,8 +159,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Functions\Debug\debug.cpp" />
-    <ClCompile Include="Functions\Debug\Engine.cpp" />
-    <ClCompile Include="Functions\Player\GodMode.cpp" />
     <ClCompile Include="functions\settings\Settings.cpp" />
     <ClCompile Include="api\discord\src\connection_win.cpp" />
     <ClCompile Include="api\discord\src\discord_register_win.cpp" />
@@ -168,8 +166,6 @@
     <ClCompile Include="api\discord\src\rpc_connection.cpp" />
     <ClCompile Include="api\discord\src\serialization.cpp" />
     <ClCompile Include="functions\about\About.cpp" />
-    <ClCompile Include="Functions\visuals\browser.cpp" />
-    <ClCompile Include="Functions\visuals\HideUI.cpp" />
     <ClCompile Include="Functions\visuals\UnlockFPS.cpp" />
     <ClCompile Include="Functions\World\SetTimeScale.cpp" />
     <ClCompile Include="GUI\ResourceLoader.cpp" />
@@ -191,11 +187,7 @@
     <ClInclude Include="config\ConfigField.h" />
     <ClInclude Include="config\ConfigManager.h" />
     <ClInclude Include="Functions\Debug\debug.h" />
-    <ClInclude Include="Functions\Debug\Engine.h" />
-    <ClInclude Include="Functions\Debug\EngineFunc.hpp" />
-    <ClInclude Include="Functions\Debug\EngineUtils.hpp" />
     <ClInclude Include="functions\FunctionIncludes.h" />
-    <ClInclude Include="Functions\Player\GodMode.h" />
     <ClInclude Include="functions\settings\Settings.h" />
     <ClCompile Include="config\ConfigManager.cpp">
       <FileType>CppHeader</FileType>
@@ -232,8 +224,6 @@
     <ClInclude Include="api\discord\src\rpc_connection.h" />
     <ClInclude Include="api\discord\src\serialization.h" />
     <ClInclude Include="functions\about\About.h" />
-    <ClInclude Include="Functions\visuals\browser.h" />
-    <ClInclude Include="Functions\visuals\HideUI.h" />
     <ClInclude Include="Functions\visuals\UnlockFPS.h" />
     <ClInclude Include="Functions\World\SetTimeScale.h" />
     <ClInclude Include="GUI\ResourceLoader.h" />

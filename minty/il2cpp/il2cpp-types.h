@@ -1,7 +1,7 @@
 ﻿#ifndef IL2CPP_TYPES_H
 #define IL2CPP_TYPES_H
 
-#include "il2cpp-enum.h"
+//#include "il2cpp-enum.h"
 
 // ******************************************************************************
 // * IL2CPP internal types
@@ -1270,7 +1270,7 @@ typedef struct Il2CppClass
     VirtualInvokeData vtable[32];
 } Il2CppClass;
 
-typedef struct Il2CppClass_1 {
+typedef struct Il2CppClass_0 {
     const Il2CppImage* image;
     void* gc_desc;
     const char* name;
@@ -1293,9 +1293,9 @@ typedef struct Il2CppClass_1 {
     Il2CppClass** nestedTypes;
     Il2CppClass** implementedInterfaces;
     Il2CppRuntimeInterfaceOffsetPair* interfaceOffsets;
-} Il2CppClass_1;
+} Il2CppClass_0;
 
-typedef struct Il2CppClass_2 {
+typedef struct Il2CppClass_1 {
     struct Il2CppClass** typeHierarchy;
     void* unity_user_data;
     uint32_t initializationExceptionGCHandle;
@@ -1328,14 +1328,14 @@ typedef struct Il2CppClass_2 {
     uint8_t packingSize;
     uint8_t bitflags1;
     uint8_t bitflags2;
-} Il2CppClass_2;
+} Il2CppClass_1;
 
 typedef struct __declspec(align(8)) Il2CppClass_Merged {
-    struct Il2CppClass_1 _1;
+    struct Il2CppClass_0 _0;
     Il2CppRuntimeInterfaceOffsetPair* interfaceOffsets;
     void* static_fields;
     const Il2CppRGCTXData* rgctx_data;
-    struct Il2CppClass_2 _2;
+    struct Il2CppClass_1 _1;
     VirtualInvokeData vtable[32];
 } Il2CppClass_Merged;
 
@@ -2283,37 +2283,297 @@ typedef union Il2CppSingle_float
 #pragma warning(disable : 4309)
 #pragma warning(disable : 4359)
 //namespace {
-
+//app
     // ******************************************************************************
     // * Application types from method calls
     // ******************************************************************************
 
 //struct UnityEngine_GameObject_Fields
-struct __declspec(align(8)) Object__Fields {
-    void* m_CachedPtr;
-};
-struct Object_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-};
-struct Object_c {
-    Il2CppClass_1 _1;
-    struct Object_StaticFields* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    Object_VTable vtable;
-};
+
+//struct UnityEngine_Vector4_Fields {
+//    float x;
+//    float y;
+//    float z;
+//    float w;
+//};
+//
+//struct Vector3 {
+//    float x;
+//    float y;
+//    float z;
+//};
+//
+//struct Vector3d {
+//    double x;
+//    double y;
+//    double z;
+//};
+//
+//struct Vector3d_1 {
+//    double x;
+//    double y;
+//    double z;
+//};
+
 struct Object {
     struct Object__Class* klass;
     MonitorData* monitor;
-    struct Object__Fields fields;
+};
+
+struct ValueType {
+    struct ValueType__Class* klass;
+    MonitorData* monitor;
+};
+
+struct Void {
+};
+
+struct Void__Boxed {
+    struct Void__Class* klass;
+    MonitorData* monitor;
+    struct Void fields;
+};
+
+struct IntPtr {
+    struct Void* m_value;
+};
+
+struct IntPtr__Boxed {
+    struct IntPtr__Class* klass;
+    MonitorData* monitor;
+    void* fields;
+};
+
+struct __declspec(align(8)) Object_1__Fields {
+    void* m_CachedPtr;
+};
+
+struct Object_1 {
+    struct Object_1__Class* klass;
+    MonitorData* monitor;
+    struct Object_1__Fields fields;
+};
+
+struct Component__Fields {
+    struct Object_1__Fields _;
+};
+
+struct Component {
+    struct Component__Class* klass;
+    MonitorData* monitor;
+    struct Component__Fields fields;
+};
+
+struct Behaviour__Fields {
+    struct Component__Fields _;
+};
+
+struct Behaviour {
+    struct Behaviour__Class* klass;
+    MonitorData* monitor;
+    struct Behaviour__Fields fields;
+};
+
+struct MonoBehaviour__Fields {
+    struct Behaviour__Fields _;
+};
+
+struct MonoBehaviour {
+    struct MonoBehaviour__Class* klass;
+    MonitorData* monitor;
+    struct MonoBehaviour__Fields fields;
+};
+
+struct Boolean {
+    bool m_value;
+};
+
+struct Boolean__Boxed {
+    struct Boolean__Class* klass;
+    MonitorData* monitor;
+    bool fields;
+};
+
+struct Single {
+    float m_value;
+};
+
+struct Single__Boxed {
+    struct Single__Class* klass;
+    MonitorData* monitor;
+    float fields;
+};
+
+struct Int32 {
+    int32_t m_value;
+};
+
+struct Int32__Boxed {
+    struct Int32__Class* klass;
+    MonitorData* monitor;
+    int32_t fields;
+};
+
+struct Vector3 {
+    float x;
+    float y;
+    float z;
+};
+
+struct Vector3__Boxed {
+    struct Vector3__Class* klass;
+    MonitorData* monitor;
+    struct Vector3 fields;
+};
+
+struct Quaternion {
+    float x;
+    float y;
+    float z;
+    float w;
+};
+
+struct Quaternion__Boxed {
+    struct Quaternion__Class* klass;
+    MonitorData* monitor;
+    struct Quaternion fields;
+};
+
+struct __declspec(align(8)) String__Fields {
+    int32_t _stringLength;
+    uint16_t _firstChar;
+};
+
+struct String {
+    struct String__Class* klass;
+    MonitorData* monitor;
+    struct String__Fields fields;
+};
+struct UIBehaviour__Fields {
+    struct MonoBehaviour__Fields _;
+};
+
+struct UIBehaviour {
+    struct UIBehaviour__Class* klass;
+    MonitorData* monitor;
+    struct UIBehaviour__Fields fields;
+};
+struct EventSystem__Fields {
+    struct UIBehaviour__Fields _;
+    struct List_1_UnityEngine_EventSystems_BaseInputModule_* m_SystemInputModules;
+    struct BaseInputModule* m_CurrentInputModule;
+    struct GameObject* m_FirstSelected;
+    bool m_sendNavigationEvents;
+    int32_t m_DragThreshold;
+    struct GameObject* m_CurrentSelected;
+    bool m_HasFocus;
+    bool m_SelectionGuard;
+    struct BaseEventData* m_DummyData;
+};
+
+struct EventSystem {
+    struct EventSystem__Class* klass;
+    MonitorData* monitor;
+    struct EventSystem__Fields fields;
+};
+struct Transform__Fields {
+    struct Component__Fields _;
+};
+struct Vector3__VTable {
+    VirtualInvokeData Equals;
+    VirtualInvokeData Finalize;
+    VirtualInvokeData GetHashCode;
+    VirtualInvokeData ToString;
+    VirtualInvokeData Equals_1;
+    VirtualInvokeData ToString_1;
+};
+
+struct Vector3__StaticFields {
+    struct Vector3 zeroVector;
+    struct Vector3 oneVector;
+    struct Vector3 upVector;
+    struct Vector3 downVector;
+    struct Vector3 leftVector;
+    struct Vector3 rightVector;
+    struct Vector3 forwardVector;
+    struct Vector3 backVector;
+    struct Vector3 positiveInfinityVector;
+    struct Vector3 negativeInfinityVector;
+};
+
+struct Vector3__Class {
+    Il2CppClass_0 _0;
+    Il2CppRuntimeInterfaceOffsetPair* interfaceOffsets;
+    struct Vector3__StaticFields* static_fields;
+    const Il2CppRGCTXData* rgctx_data;
+    Il2CppClass_1 _1;
+    struct Vector3__VTable vtable;
+};
+
+struct Quaternion__VTable {
+    VirtualInvokeData Equals;
+    VirtualInvokeData Finalize;
+    VirtualInvokeData GetHashCode;
+    VirtualInvokeData ToString;
+    VirtualInvokeData Equals_1;
+    VirtualInvokeData ToString_1;
+};
+
+struct Quaternion__StaticFields {
+    struct Quaternion identityQuaternion;
+};
+
+struct Quaternion__Class {
+    Il2CppClass_0 _0;
+    Il2CppRuntimeInterfaceOffsetPair* interfaceOffsets;
+    struct Quaternion__StaticFields* static_fields;
+    const Il2CppRGCTXData* rgctx_data;
+    Il2CppClass_1 _1;
+    struct Quaternion__VTable vtable;
+};
+
+struct Transform__VTable {
+    VirtualInvokeData Equals;
+    VirtualInvokeData Finalize;
+    VirtualInvokeData GetHashCode;
+    VirtualInvokeData ToString;
+    VirtualInvokeData GetEnumerator;
+};
+
+struct Transform__StaticFields {
+};
+
+struct Transform__Class {
+    Il2CppClass_0 _0;
+    Il2CppRuntimeInterfaceOffsetPair* interfaceOffsets;
+    struct Transform__StaticFields* static_fields;
+    const Il2CppRGCTXData* rgctx_data;
+    Il2CppClass_1 _1;
+    struct Transform__VTable vtable;
+};
+struct Transform {
+    struct Transform__Class* klass;
+    MonitorData* monitor;
+    struct Transform__Fields fields;
+};
+enum class CursorLockMode__Enum : int32_t {
+    None = 0x00000000,
+    Locked = 0x00000001,
+    Confined = 0x00000002,
+};
+
+enum class PrimitiveType__Enum : int32_t {
+    Sphere = 0x00000000,
+    Capsule = 0x00000001,
+    Cylinder = 0x00000002,
+    Cube = 0x00000003,
+    Plane = 0x00000004,
+    Quad = 0x00000005,
 };
 struct GameObject__Fields {
-    struct Object__Fields _ ;
+    struct Object_1__Fields _;
 };
-//_o
+
 struct GameObject {
     struct GameObject__Class* klass;
     MonitorData* monitor;
@@ -2326,1401 +2586,17 @@ struct GameObject__VTable {
     VirtualInvokeData GetHashCode;
     VirtualInvokeData ToString;
 };
+
 struct GameObject__StaticFields {
 };
-//struct UnityEngine_GameObject_c
+
 struct GameObject__Class {
-    Il2CppClass_1 _1;
+    Il2CppClass_0 _0;
+    Il2CppRuntimeInterfaceOffsetPair* interfaceOffsets;
     struct GameObject__StaticFields* static_fields;
     const Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
+    Il2CppClass_1 _1;
     struct GameObject__VTable vtable;
 };
 
-
-
-struct Component__Fields {
-    struct Object__Fields _;
-};
-
-struct Component {
-    struct Component__Class* klass;
-    MonitorData* monitor;
-    struct Component__Fields fields;
-};
-
-struct Transform__Fields {
-    struct Component__Fields _;
-};
-
-struct Transform {
-    void* klass;
-    MonitorData* monitor;
-    struct Transform__Fields fields;
-};
-
-struct Transform__Array {
-    void* klass;
-    MonitorData* monitor;
-    Il2CppArrayBounds* bounds;
-    il2cpp_array_size_t max_length;
-    struct Transform* vector[32];
-};
-struct UnityEngine_Behaviour_Fields {
-    struct Component__Fields _;
-};
-struct UnityEngine_Behaviour_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-};
-struct UnityEngine_Behaviour_c {
-    Il2CppClass_1 _1;
-    void* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    UnityEngine_Behaviour_VTable vtable;
-};
-struct UnityEngine_Behaviour_o {
-    UnityEngine_Behaviour_c* klass;
-    void* monitor;
-    UnityEngine_Behaviour_Fields fields;
-};
-struct UnityEngine_MonoBehaviour_Fields {
-    struct UnityEngine_Behaviour_Fields _;
-};
-struct UnityEngine_MonoBehaviour_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-};
-struct UnityEngine_MonoBehaviour_c {
-    Il2CppClass_1 _1;
-    void* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    UnityEngine_MonoBehaviour_VTable vtable;
-};
-struct UnityEngine_MonoBehaviour_o {
-    UnityEngine_MonoBehaviour_c* klass;
-    void* monitor;
-    UnityEngine_MonoBehaviour_Fields fields;
-};
-struct UnityEngine_EventSystems_UIBehaviour_Fields  {
-    struct UnityEngine_MonoBehaviour_Fields _;
-};
-struct UnityEngine_EventSystems_UIBehaviour_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-    VirtualInvokeData _4_Awake;
-    VirtualInvokeData _5_OnEnable;
-    VirtualInvokeData _6_Start;
-    VirtualInvokeData _7_OnDisable;
-    VirtualInvokeData _8_OnDestroy;
-    VirtualInvokeData _9_IsActive;
-    VirtualInvokeData _10_OnRectTransformDimensionsChange;
-    VirtualInvokeData _11_OnBeforeTransformParentChanged;
-    VirtualInvokeData _12_OnTransformParentChanged;
-    VirtualInvokeData _13_OnDidApplyAnimationProperties;
-    VirtualInvokeData _14_OnCanvasGroupChanged;
-    VirtualInvokeData _15_OnCanvasHierarchyChanged;
-    VirtualInvokeData _16_IsDestroyed;
-};
-struct UnityEngine_EventSystems_UIBehaviour_c {
-    Il2CppClass_1 _1;
-    void* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    UnityEngine_EventSystems_UIBehaviour_VTable vtable;
-};
-struct UnityEngine_EventSystems_UIBehaviour_o {
-    UnityEngine_EventSystems_UIBehaviour_c* klass;
-    void* monitor;
-    UnityEngine_EventSystems_UIBehaviour_Fields fields;
-};
-struct UnityEngine_Color_Fields {
-    float r;
-    float g;
-    float b;
-    float a;
-};
-struct UnityEngine_Color_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-    VirtualInvokeData _4_Equals;
-    VirtualInvokeData _5_ToString;
-};
-struct UnityEngine_Color_c {
-    Il2CppClass_1 _1;
-    void* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    UnityEngine_Color_VTable vtable;
-};
-struct UnityEngine_Color_o {
-    UnityEngine_Color_Fields fields;
-};
-struct UnityEngine_Vector4_Fields {
-    float x;
-    float y;
-    float z;
-    float w;
-};
-struct UnityEngine_Vector4_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-    VirtualInvokeData _4_Equals;
-    VirtualInvokeData _5_ToString;
-};
-struct UnityEngine_Vector4_c {
-    Il2CppClass_1 _1;
-    struct UnityEngine_Vector4_StaticFields* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    UnityEngine_Vector4_VTable vtable;
-};
-struct UnityEngine_Vector4_o {
-    UnityEngine_Vector4_Fields fields;
-};
-struct UnityEngine_Vector4_StaticFields {
-    struct UnityEngine_Vector4_o zeroVector;
-    struct UnityEngine_Vector4_o oneVector;
-    struct UnityEngine_Vector4_o positiveInfinityVector;
-    struct UnityEngine_Vector4_o negativeInfinityVector;
-};
-struct UnityEngine_UI_Graphic_Fields  {
-    struct UnityEngine_EventSystems_UIBehaviour_Fields _;
-    struct UnityEngine_Material_o* m_Material;
-    struct UnityEngine_Color_o m_Color;
-    bool m_SkipLayoutUpdate;
-    bool m_SkipMaterialUpdate;
-    bool m_RaycastTarget;
-    struct UnityEngine_Vector4_o m_RaycastPadding;
-    struct UnityEngine_RectTransform_o* m_RectTransform;
-    struct UnityEngine_CanvasRenderer_o* m_CanvasRenderer;
-    struct UnityEngine_Canvas_o* m_Canvas;
-    bool m_VertsDirty;
-    bool m_MaterialDirty;
-    struct UnityEngine_Events_UnityAction_o* m_OnDirtyLayoutCallback;
-    struct UnityEngine_Events_UnityAction_o* m_OnDirtyVertsCallback;
-    struct UnityEngine_Events_UnityAction_o* m_OnDirtyMaterialCallback;
-    struct UnityEngine_Mesh_o* m_CachedMesh;
-    struct UnityEngine_Vector2_array* m_CachedUvs;
-    struct UnityEngine_UI_CoroutineTween_TweenRunner_ColorTween__o* m_ColorTweenRunner;
-    bool _useLegacyMeshGeneration_k__BackingField;
-};
-struct UnityEngine_UI_Graphic_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-    VirtualInvokeData _4_Awake;
-    VirtualInvokeData _5_OnEnable;
-    VirtualInvokeData _6_Start;
-    VirtualInvokeData _7_OnDisable;
-    VirtualInvokeData _8_OnDestroy;
-    VirtualInvokeData _9_IsActive;
-    VirtualInvokeData _10_OnRectTransformDimensionsChange;
-    VirtualInvokeData _11_OnBeforeTransformParentChanged;
-    VirtualInvokeData _12_OnTransformParentChanged;
-    VirtualInvokeData _13_OnDidApplyAnimationProperties;
-    VirtualInvokeData _14_OnCanvasGroupChanged;
-    VirtualInvokeData _15_OnCanvasHierarchyChanged;
-    VirtualInvokeData _16_IsDestroyed;
-    VirtualInvokeData _17_unknown;
-    VirtualInvokeData _18_UnityEngine_UI_ICanvasElement_get_transform;
-    VirtualInvokeData _19_unknown;
-    VirtualInvokeData _20_unknown;
-    VirtualInvokeData _21_unknown;
-    VirtualInvokeData _22_get_color;
-    VirtualInvokeData _23_set_color;
-    VirtualInvokeData _24_get_raycastTarget;
-    VirtualInvokeData _25_set_raycastTarget;
-    VirtualInvokeData _26_SetAllDirty;
-    VirtualInvokeData _27_SetLayoutDirty;
-    VirtualInvokeData _28_SetVerticesDirty;
-    VirtualInvokeData _29_SetMaterialDirty;
-    VirtualInvokeData _30_get_rectTransform;
-    VirtualInvokeData _31_get_defaultMaterial;
-    VirtualInvokeData _32_get_material;
-    VirtualInvokeData _33_set_material;
-    VirtualInvokeData _34_get_materialForRendering;
-    VirtualInvokeData _35_get_mainTexture;
-    VirtualInvokeData _36_OnCullingChanged;
-    VirtualInvokeData _37_Rebuild;
-    VirtualInvokeData _38_LayoutComplete;
-    VirtualInvokeData _39_GraphicUpdateComplete;
-    VirtualInvokeData _40_UpdateMaterial;
-    VirtualInvokeData _41_UpdateGeometry;
-    VirtualInvokeData _42_OnFillVBO;
-    VirtualInvokeData _43_OnPopulateMesh;
-    VirtualInvokeData _44_OnPopulateMesh;
-    VirtualInvokeData _45_SetNativeSize;
-    VirtualInvokeData _46_Raycast;
-    VirtualInvokeData _47_CrossFadeColor;
-    VirtualInvokeData _48_CrossFadeColor;
-    VirtualInvokeData _49_CrossFadeAlpha;
-};
-struct UnityEngine_UI_Graphic_c {
-    Il2CppClass_1 _1;
-    struct UnityEngine_UI_Graphic_StaticFields* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    UnityEngine_UI_Graphic_VTable vtable;
-};
-struct UnityEngine_UI_Graphic_o {
-    UnityEngine_UI_Graphic_c* klass;
-    void* monitor;
-    UnityEngine_UI_Graphic_Fields fields;
-};
-struct UnityEngine_UI_Graphic_StaticFields {
-    struct UnityEngine_Material_o* s_DefaultUI;
-    struct UnityEngine_Texture2D_o* s_WhiteTexture;
-    struct UnityEngine_Mesh_o* s_Mesh;
-    struct UnityEngine_UI_VertexHelper_o* s_VertexHelper;
-};
-struct UnityEngine_UI_MaskableGraphic_Fields {
-    struct UnityEngine_UI_Graphic_Fields _;
-    bool m_ShouldRecalculateStencil;
-    struct UnityEngine_Material_o* m_MaskMaterial;
-    struct UnityEngine_UI_RectMask2D_o* m_ParentMask;
-    bool m_Maskable;
-    bool m_IsMaskingGraphic;
-    bool m_IncludeForMasking;
-    struct UnityEngine_UI_MaskableGraphic_CullStateChangedEvent_o* m_OnCullStateChanged;
-    bool m_ShouldRecalculate;
-    int32_t m_StencilValue;
-    struct UnityEngine_Vector3_array* m_Corners;
-};
-struct UnityEngine_UI_MaskableGraphic_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-    VirtualInvokeData _4_Awake;
-    VirtualInvokeData _5_OnEnable;
-    VirtualInvokeData _6_Start;
-    VirtualInvokeData _7_OnDisable;
-    VirtualInvokeData _8_OnDestroy;
-    VirtualInvokeData _9_IsActive;
-    VirtualInvokeData _10_OnRectTransformDimensionsChange;
-    VirtualInvokeData _11_OnBeforeTransformParentChanged;
-    VirtualInvokeData _12_OnTransformParentChanged;
-    VirtualInvokeData _13_OnDidApplyAnimationProperties;
-    VirtualInvokeData _14_OnCanvasGroupChanged;
-    VirtualInvokeData _15_OnCanvasHierarchyChanged;
-    VirtualInvokeData _16_IsDestroyed;
-    VirtualInvokeData _17_unknown;
-    VirtualInvokeData _18_UnityEngine_UI_ICanvasElement_get_transform;
-    VirtualInvokeData _19_unknown;
-    VirtualInvokeData _20_unknown;
-    VirtualInvokeData _21_unknown;
-    VirtualInvokeData _22_get_color;
-    VirtualInvokeData _23_set_color;
-    VirtualInvokeData _24_get_raycastTarget;
-    VirtualInvokeData _25_set_raycastTarget;
-    VirtualInvokeData _26_SetAllDirty;
-    VirtualInvokeData _27_SetLayoutDirty;
-    VirtualInvokeData _28_SetVerticesDirty;
-    VirtualInvokeData _29_SetMaterialDirty;
-    VirtualInvokeData _30_get_rectTransform;
-    VirtualInvokeData _31_get_defaultMaterial;
-    VirtualInvokeData _32_get_material;
-    VirtualInvokeData _33_set_material;
-    VirtualInvokeData _34_get_materialForRendering;
-    VirtualInvokeData _35_get_mainTexture;
-    VirtualInvokeData _36_OnCullingChanged;
-    VirtualInvokeData _37_Rebuild;
-    VirtualInvokeData _38_LayoutComplete;
-    VirtualInvokeData _39_GraphicUpdateComplete;
-    VirtualInvokeData _40_UpdateMaterial;
-    VirtualInvokeData _41_UpdateGeometry;
-    VirtualInvokeData _42_OnFillVBO;
-    VirtualInvokeData _43_OnPopulateMesh;
-    VirtualInvokeData _44_OnPopulateMesh;
-    VirtualInvokeData _45_SetNativeSize;
-    VirtualInvokeData _46_Raycast;
-    VirtualInvokeData _47_CrossFadeColor;
-    VirtualInvokeData _48_CrossFadeColor;
-    VirtualInvokeData _49_CrossFadeAlpha;
-    VirtualInvokeData _50_UnityEngine_UI_IClippable_get_gameObject;
-    VirtualInvokeData _51_unknown;
-    VirtualInvokeData _52_unknown;
-    VirtualInvokeData _53_unknown;
-    VirtualInvokeData _54_unknown;
-    VirtualInvokeData _55_unknown;
-    VirtualInvokeData _56_unknown;
-    VirtualInvokeData _57_unknown;
-    VirtualInvokeData _58_GetModifiedMaterial;
-    VirtualInvokeData _59_Cull;
-    VirtualInvokeData _60_SetClipRect;
-    VirtualInvokeData _61_SetClipSoftness;
-    VirtualInvokeData _62_ParentMaskStateChanged;
-    VirtualInvokeData _63_RecalculateClipping;
-    VirtualInvokeData _64_RecalculateMasking;
-};
-struct UnityEngine_UI_MaskableGraphic_c {
-    Il2CppClass_1 _1;
-    void* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    UnityEngine_UI_MaskableGraphic_VTable vtable;
-};
-struct UnityEngine_UI_MaskableGraphic_o {
-    UnityEngine_UI_MaskableGraphic_c* klass;
-    void* monitor;
-    UnityEngine_UI_MaskableGraphic_Fields fields;
-};
-struct UnityEngine_UI_Text_Fields  {
-    struct UnityEngine_UI_MaskableGraphic_Fields _;
-    struct UnityEngine_UI_FontData_o* m_FontData;
-    struct String* m_Text;
-    struct UnityEngine_TextGenerator_o* m_TextCache;
-    struct UnityEngine_TextGenerator_o* m_TextCacheForLayout;
-    bool m_DisableFontTextureRebuiltCallback;
-    struct UnityEngine_UIVertex_array* m_TempVerts;
-};
-struct UnityEngine_UI_Text_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-    VirtualInvokeData _4_Awake;
-    VirtualInvokeData _5_OnEnable;
-    VirtualInvokeData _6_Start;
-    VirtualInvokeData _7_OnDisable;
-    VirtualInvokeData _8_OnDestroy;
-    VirtualInvokeData _9_IsActive;
-    VirtualInvokeData _10_OnRectTransformDimensionsChange;
-    VirtualInvokeData _11_OnBeforeTransformParentChanged;
-    VirtualInvokeData _12_OnTransformParentChanged;
-    VirtualInvokeData _13_OnDidApplyAnimationProperties;
-    VirtualInvokeData _14_OnCanvasGroupChanged;
-    VirtualInvokeData _15_OnCanvasHierarchyChanged;
-    VirtualInvokeData _16_IsDestroyed;
-    VirtualInvokeData _17_unknown;
-    VirtualInvokeData _18_UnityEngine_UI_ICanvasElement_get_transform;
-    VirtualInvokeData _19_unknown;
-    VirtualInvokeData _20_unknown;
-    VirtualInvokeData _21_unknown;
-    VirtualInvokeData _22_get_color;
-    VirtualInvokeData _23_set_color;
-    VirtualInvokeData _24_get_raycastTarget;
-    VirtualInvokeData _25_set_raycastTarget;
-    VirtualInvokeData _26_SetAllDirty;
-    VirtualInvokeData _27_SetLayoutDirty;
-    VirtualInvokeData _28_SetVerticesDirty;
-    VirtualInvokeData _29_SetMaterialDirty;
-    VirtualInvokeData _30_get_rectTransform;
-    VirtualInvokeData _31_get_defaultMaterial;
-    VirtualInvokeData _32_get_material;
-    VirtualInvokeData _33_set_material;
-    VirtualInvokeData _34_get_materialForRendering;
-    VirtualInvokeData _35_get_mainTexture;
-    VirtualInvokeData _36_OnCullingChanged;
-    VirtualInvokeData _37_Rebuild;
-    VirtualInvokeData _38_LayoutComplete;
-    VirtualInvokeData _39_GraphicUpdateComplete;
-    VirtualInvokeData _40_UpdateMaterial;
-    VirtualInvokeData _41_UpdateGeometry;
-    VirtualInvokeData _42_OnFillVBO;
-    VirtualInvokeData _43_OnPopulateMesh;
-    VirtualInvokeData _44_OnPopulateMesh;
-    VirtualInvokeData _45_SetNativeSize;
-    VirtualInvokeData _46_Raycast;
-    VirtualInvokeData _47_CrossFadeColor;
-    VirtualInvokeData _48_CrossFadeColor;
-    VirtualInvokeData _49_CrossFadeAlpha;
-    VirtualInvokeData _50_UnityEngine_UI_IClippable_get_gameObject;
-    VirtualInvokeData _51_unknown;
-    VirtualInvokeData _52_unknown;
-    VirtualInvokeData _53_unknown;
-    VirtualInvokeData _54_unknown;
-    VirtualInvokeData _55_unknown;
-    VirtualInvokeData _56_unknown;
-    VirtualInvokeData _57_unknown;
-    VirtualInvokeData _58_GetModifiedMaterial;
-    VirtualInvokeData _59_Cull;
-    VirtualInvokeData _60_SetClipRect;
-    VirtualInvokeData _61_SetClipSoftness;
-    VirtualInvokeData _62_ParentMaskStateChanged;
-    VirtualInvokeData _63_RecalculateClipping;
-    VirtualInvokeData _64_RecalculateMasking;
-    VirtualInvokeData _65_unknown;
-    VirtualInvokeData _66_unknown;
-    VirtualInvokeData _67_unknown;
-    VirtualInvokeData _68_unknown;
-    VirtualInvokeData _69_unknown;
-    VirtualInvokeData _70_unknown;
-    VirtualInvokeData _71_unknown;
-    VirtualInvokeData _72_unknown;
-    VirtualInvokeData _73_unknown;
-    VirtualInvokeData _74_get_text;
-    VirtualInvokeData _75_set_text;
-    VirtualInvokeData _76_CalculateLayoutInputHorizontal;
-    VirtualInvokeData _77_CalculateLayoutInputVertical;
-    VirtualInvokeData _78_get_minWidth;
-    VirtualInvokeData _79_get_preferredWidth;
-    VirtualInvokeData _80_get_flexibleWidth;
-    VirtualInvokeData _81_get_minHeight;
-    VirtualInvokeData _82_get_preferredHeight;
-    VirtualInvokeData _83_get_flexibleHeight;
-    VirtualInvokeData _84_get_layoutPriority;
-};
-struct UnityEngine_UI_Text_c {
-    Il2CppClass_1 _1;
-    struct UnityEngine_UI_Text_StaticFields* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    UnityEngine_UI_Text_VTable vtable;
-};
-struct Text {
-    UnityEngine_UI_Text_c* klass;
-    MonitorData* monitor;
-    UnityEngine_UI_Text_Fields fields;
-};
-struct Text_StaticFields {
-    struct UnityEngine_Material_o* s_DefaultText;
-};
-struct Vector3 {
-    float x;
-    float y;
-    float z;
-};
-
-struct Vector3d {
-    double x;
-    double y;
-    double z;
-};
-
-struct Vector3d_1 {
-    double x;
-    double y;
-    double z;
-};
-
-struct String__VTable {
-    VirtualInvokeData Equals;
-    VirtualInvokeData Finalize;
-    VirtualInvokeData GetHashCode;
-    VirtualInvokeData ToString;
-};
-
-
-struct System_String_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-    VirtualInvokeData _4_CompareTo;
-    VirtualInvokeData _5_Clone;
-    VirtualInvokeData _6_GetTypeCode;
-    VirtualInvokeData _7_System_IConvertible_ToBoolean;
-    VirtualInvokeData _8_System_IConvertible_ToChar;
-    VirtualInvokeData _9_System_IConvertible_ToSByte;
-    VirtualInvokeData _10_System_IConvertible_ToByte;
-    VirtualInvokeData _11_System_IConvertible_ToInt16;
-    VirtualInvokeData _12_System_IConvertible_ToUInt16;
-    VirtualInvokeData _13_System_IConvertible_ToInt32;
-    VirtualInvokeData _14_System_IConvertible_ToUInt32;
-    VirtualInvokeData _15_System_IConvertible_ToInt64;
-    VirtualInvokeData _16_System_IConvertible_ToUInt64;
-    VirtualInvokeData _17_System_IConvertible_ToSingle;
-    VirtualInvokeData _18_System_IConvertible_ToDouble;
-    VirtualInvokeData _19_System_IConvertible_ToDecimal;
-    VirtualInvokeData _20_System_IConvertible_ToDateTime;
-    VirtualInvokeData _21_ToString;
-    VirtualInvokeData _22_System_IConvertible_ToType;
-    VirtualInvokeData _23_System_Collections_IEnumerable_GetEnumerator;
-    VirtualInvokeData _24_CompareTo;
-    VirtualInvokeData _25_System_Collections_Generic_IEnumerable_System_Char__GetEnumerator;
-    VirtualInvokeData _26_Equals;
-};
-struct System_String_c {
-    Il2CppClass_1 _1;
-    struct System_String_StaticFields* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    System_String_VTable vtable;
-};
-
-struct __declspec(align(8)) System_String_Fields {
-    int32_t m_stringLength;
-    uint16_t m_firstChar;
-};
-
-struct String {
-    System_String_c* klass;
-    MonitorData* monitor;
-    System_String_Fields fields;
-};
-
-struct System_String_StaticFields {
-    struct String* Empty;
-};
-struct Quaternion {
-    float x;
-    float y;
-    float z;
-    float w;
-};
-struct Network_SkillInfo_Fields {
-    int32_t Level;
-    int32_t Category;
-    int32_t ConfigurationIndex;
-    int32_t PlayingOrder;
-};
-struct Network_SkillInfo_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-};
-struct Network_SkillInfo_c {
-    Il2CppClass_1 _1;
-    void* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    Network_SkillInfo_VTable vtable;
-};
-struct Network_SkillInfo_o {
-    Network_SkillInfo_Fields fields;
-};
-struct Network_BattleObjectId_Fields {
-    int32_t Id;
-};
-struct Network_BattleObjectId_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-    VirtualInvokeData _4_Serialize;
-    VirtualInvokeData _5_Equals;
-    VirtualInvokeData _6_CompareTo;
-};
-struct Network_BattleObjectId_c {
-    Il2CppClass_1 _1;
-    struct Network_BattleObjectId_StaticFields* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    Network_BattleObjectId_VTable vtable;
-};
-struct Network_BattleObjectId_o {
-    Network_BattleObjectId_Fields fields;
-};
-struct Network_BattleObjectId_StaticFields {
-    struct Network_BattleObjectId_o UndefinedId;
-};
-struct __declspec(align(8)) Network_Utility_IEffectStatus_Fields {
-};
-struct Network_Utility_IEffectStatus_c {
-    Il2CppClass_1 _1;
-    void* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    VirtualInvokeData vtable[32];
-};
-struct Network_Utility_IEffectStatus_o {
-    Network_Utility_IEffectStatus_c* klass;
-    void* monitor;
-    Network_Utility_IEffectStatus_Fields fields;
-};
-struct __declspec(align(8)) Network_Utility_SkillUsingStatus_Fields {
-    struct Network_Utility_IEffectStatusBattleObject_o* _Caster_k__BackingField;
-    struct Network_Utility_IEffectStatusBattleObject_o* _Receiver_k__BackingField;
-    struct System_Collections_Generic_IEnumerable_IEffectStatusBattleObject__o* _Targets_k__BackingField;
-};
-struct Network_Utility_SkillUsingStatus_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-    VirtualInvokeData _4_get_Receiver;
-};
-struct Network_Utility_SkillUsingStatus_c {
-    Il2CppClass_1 _1;
-    void* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    Network_Utility_SkillUsingStatus_VTable vtable;
-};
-struct Network_Utility_SkillUsingStatus_o {
-    Network_Utility_SkillUsingStatus_c* klass;
-    MonitorData* monitor;
-    Network_Utility_SkillUsingStatus_Fields fields;
-};
-struct __declspec(align(8)) Network_Utility_ElementTypeMatchup_Fields {
-};
-struct Network_SkillSourceInfo_Fields {
-    int32_t ElementType;
-    int32_t SkillSlotNumber;
-};
-struct Network_SkillSourceInfo_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-};
-struct Network_SkillSourceInfo_c {
-    Il2CppClass_1 _1;
-    void* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    Network_SkillSourceInfo_VTable vtable;
-};
-struct Network_SkillSourceInfo_o {
-    Network_SkillSourceInfo_Fields fields;
-};
-struct __declspec(align(8)) Network_IBattleLogicEvent_Fields {
-};
-struct Network_LogicTimeSpan_Fields {
-    int32_t Milliseconds;
-};
-struct Network_LogicTimeSpan_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-    VirtualInvokeData _4_Serialize;
-    VirtualInvokeData _5_Equals;
-    VirtualInvokeData _6_CompareTo;
-};
-struct Network_LogicTimeSpan_c {
-    Il2CppClass_1 _1;
-    struct Network_LogicTimeSpan_StaticFields* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    Network_LogicTimeSpan_VTable vtable;
-};
-struct Network_LogicTimeSpan_o {
-    Network_LogicTimeSpan_Fields fields;
-};
-struct Network_LogicTimeSpan_StaticFields {
-    struct Network_LogicTimeSpan_o Zero;
-    struct Network_LogicTimeSpan_o MaxValue;
-};
-struct Network_SpecialPoint_Fields {
-    int32_t Current;
-};
-struct Network_SpecialPoint_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-    VirtualInvokeData _4_Serialize;
-};
-struct Network_SpecialPoint_c {
-    Il2CppClass_1 _1;
-    void* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    Network_SpecialPoint_VTable vtable;
-};
-struct Network_SpecialPoint_o {
-    Network_SpecialPoint_Fields fields;
-};
-struct Network_BreakPoint_Fields {
-    int64_t Current;
-    int64_t Max;
-};
-struct Network_BreakPoint_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-    VirtualInvokeData _4_Serialize;
-};
-struct Network_BreakPoint_c {
-    Il2CppClass_1 _1;
-    void* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    Network_BreakPoint_VTable vtable;
-};
-struct Network_BreakPoint_o {
-    Network_BreakPoint_Fields fields;
-};
-
-struct Network_BattleObjectData_Fields {
-    int32_t ObjectType;
-    int32_t TeamId;
-    int64_t Code;
-    int32_t Rarity;
-    int32_t Role;
-    int32_t LimitBreakCount;
-    int32_t CharacterRank;
-    int32_t AttributeType;
-    float AttackRange;
-    bool IsBoss;
-    bool InitialVisibility;
-    float InitialPosition;
-    int32_t InitialPlacementIndex;
-    float BodyRadius;
-    int32_t TrainingId;
-    bool IsJoin;
-    int32_t JoinWaveIndex;
-    int32_t Level;
-    bool IsRental;
-    int32_t MemberIndex;
-};
-struct Network_BattleObjectData_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-    VirtualInvokeData _4_Serialize;
-};
-struct Network_BattleObjectData_c {
-    Il2CppClass_1 _1;
-    void* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    Network_BattleObjectData_VTable vtable;
-};
-struct Network_BattleObjectData_o {
-    Network_BattleObjectData_Fields fields;
-};
-struct __declspec(align(8)) BattleLogic_Skills_SkillPerformer_Fields {
-    struct System_Collections_Generic_Dictionary_BattleObjectId__UseSkillEventDispatcher__o* _eventDispatchers;
-    struct BattleLogic_Skills_SkillHitCounter_o* _hitCounter;
-    struct BattleLogic_Skills_SkillHitCounter_o* _criticalCounter;
-    struct BattleLogic_BattleLogic_o* _logic;
-    struct BattleLogic_Skills_BattleDryRunner_o* _dryRunner;
-    struct BattleLogic_BattleObjectContainer_o* _battleObjectContainer;
-    struct BattleLogic_Models_BattleObject_o* _owner;
-    struct Network_BattleObjectId_o _ownerId;
-    struct BattleLogic_Models_ISkill_o* _skill;
-    int32_t _SkillLevel_k__BackingField;
-    struct Network_SkillInfo_o _skillInfo;
-    struct Network_SkillSourceInfo_o _skillSourceInfo;
-    struct CaravanWa_Shared_MasterTable_ISkillEffectMaster_o* _iSkillEffectMaster;
-    struct CaravanWa_Shared_MasterTable_SkillPowerMaster_o* _skillPowerMaster;
-    float _baseHateAmount;
-    struct BattleLogic_Skills_SkillPerformRecorder_o* _performRecorder;
-    struct BattleLogic_ISkillResultRecorder_o* _resultRecorder;
-    struct Network_LogicTimeSpan_o _affectSkillResultTime;
-    struct Network_LogicTimeSpan_o _notifySkillPlayingTime;
-    int32_t _gainedSpecialPointActionCount;
-    struct Network_BattleObjectId_o _focusId;
-    bool _isOverrideDamageValue;
-    int64_t _OverrideDamageValue;
-    struct BattleLogic_BattleMatchSettings_o* _battleMatchSetting;
-    bool _isSpecial;
-    struct System_Collections_Generic_IEnumerable_AffectSkillResultCommand__o* _previousAffectSkillResults;
-};
-struct Network_MatchId_Fields {
-    int32_t Id;
-};
-struct Network_MatchId_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-    VirtualInvokeData _4_Serialize;
-    VirtualInvokeData _5_Equals;
-};
-struct Network_MatchId_c {
-    Il2CppClass_1 _1;
-    void* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    Network_MatchId_VTable vtable;
-};
-struct Network_MatchId_o {
-    Network_MatchId_Fields fields;
-};
-struct BattleLogic_Skills_SkillPerformer_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-};
-struct BattleLogic_Skills_SkillPerformer_c {
-    Il2CppClass_1 _1;
-    struct BattleLogic_Skills_SkillPerformer_StaticFields* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    BattleLogic_Skills_SkillPerformer_VTable vtable;
-};
-struct BattleLogic_Skills_SkillPerformer_o {
-    BattleLogic_Skills_SkillPerformer_c* klass;
-    MonitorData* monitor;
-    BattleLogic_Skills_SkillPerformer_Fields fields;
-};
-struct BattleLogic_Skills_SkillPerformer_StaticFields {
-    struct System_Collections_Generic_Dictionary_long__int__o* _maxPowerLevelCache;
-};
-
-
-
-struct Network_SkillActionType_Fields {
-    int32_t EffectExecutionType;
-    int32_t EffectExecutionNumber;
-};
-struct Network_SkillActionType_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-    VirtualInvokeData _4_Serialize;
-    VirtualInvokeData _5_Equals;
-};
-struct Network_SkillActionType_c {
-    Il2CppClass_1 _1;
-    void* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    Network_SkillActionType_VTable vtable;
-};
-struct Network_SkillActionType_o {
-    Network_SkillActionType_Fields fields;
-};
-struct __declspec(align(8)) Network_SkillAction_Fields {
-};
-struct __declspec(align(8)) BattleLogic_Models_BattleObject_Fields {
-    bool IsClone;
-    bool _AliveWithParent_k__BackingField;
-    struct Network_LogicTimeSpan_o _CreatedAt_k__BackingField;
-    int32_t _Level_k__BackingField;
-    int32_t _EnemyType_k__BackingField;
-    struct Network_IReadonlyCharacterParameter_o* LowerLimitedParameter;
-    struct Network_IReadonlyCharacterParameter_o* UpperLimitedParameter;
-    float _InitialSkillWaitTimeDelayRate_k__BackingField;
-    float _SkillWaitTimeDelayRate_k__BackingField;
-    struct System_Collections_Generic_IEnumerable_long__o* _CharacterGroupSettingCodes_k__BackingField;
-    int64_t _UserId_k__BackingField;
-    bool _IsReady_k__BackingField;
-    struct BattleLogic_Models_Skills_o* Skills;
-    struct Network_BattleObjectId_o _TargetId_k__BackingField;
-    struct Network_Health_o* _Health_k__BackingField;
-    struct Network_SpecialPoint_o _SpecialPoint_k__BackingField;
-    struct Network_BreakPoint_o _BreakPoint_k__BackingField;
-    struct BattleLogic_Models_HateMap_o* _HateMap_k__BackingField;
-    struct BattleLogic_Models_StatusEffects_o* _statusEffects;
-    struct System_Collections_Generic_List_EffectedParameterInfo__o* _EffectedParameterInfos_k__BackingField;
-    struct BattleLogic_StatusForAI_o* _StatusForAI_k__BackingField;
-    int32_t NormalStatusBitFlag;
-    bool _IsEscaping_k__BackingField;
-    bool _IsDisconnected_k__BackingField;
-    int32_t _KilledCount_k__BackingField;
-    bool _Visibility_k__BackingField;
-    bool _IsAlive_k__BackingField;
-    bool _IsReviving_k__BackingField;
-    bool _IsPlayingSkill_k__BackingField;
-    bool _IsPlayingReviveSkill_k__BackingField;
-    bool _IsToDie_k__BackingField;
-    bool _IsImmortalObject_k__BackingField;
-    bool _IsUndeadAndUnmovable_k__BackingField;
-    struct System_Collections_Generic_List_int__o* _waitingDiePassiveSkills;
-    bool _IsSealedSpecialSkill_k__BackingField;
-    struct BattleLogic_Models_Blockers_o* _Blockers_k__BackingField;
-    struct Network_ObjectTypeChecker_o* TypeChecker;
-    struct System_Action_BattleObject__o* EscapeFinished;
-    bool _IsTargetInAttakRange_k__BackingField;
-    struct Network_BattleObjectData_o _battleObjectData;
-    float _InitPosition_k__BackingField;
-    int32_t _InitPlacementIndex_k__BackingField;
-    struct CaravanWa_Shared_MasterTable_ClosenessParameterMaster_o* _ClosenessParameterMaster_k__BackingField;
-    struct BattleLogic_MatchRoleDamageCoefficientInfo_o* _MatchRoleDamageCoefficientInfo_k__BackingField;
-};
-struct BattleLogic_Models_BattleObject_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-    VirtualInvokeData _4_get_Id;
-    VirtualInvokeData _5_get_ElementType;
-    VirtualInvokeData _6_get_SkillBlockingByEnemy;
-    VirtualInvokeData _7_GetTeam;
-    VirtualInvokeData _8_HasStatusEffect;
-    VirtualInvokeData _9_HasStatusEffect;
-    VirtualInvokeData _10_StatusEffectCount;
-    VirtualInvokeData _11_HealthRateConditionSatisfied;
-};
-struct BattleLogic_Models_BattleObject_c {
-    Il2CppClass_1 _1;
-    void* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    BattleLogic_Models_BattleObject_VTable vtable;
-};
-struct BattleLogic_Models_BattleObject_o {
-    BattleLogic_Models_BattleObject_c* klass;
-    MonitorData* monitor;
-    BattleLogic_Models_BattleObject_Fields fields;
-};
-
-
-
-struct __declspec(align(8)) CaravanWa_Shared_MasterTable_SkillPowerMaster_Fields {
-    int64_t _Code_k__BackingField;
-    int32_t _Level_k__BackingField;
-    float _Power_k__BackingField;
-    bool _IsPercent_k__BackingField;
-    int64_t _MultiplyReferenceCode_k__BackingField;
-};
-struct CaravanWa_Shared_MasterTable_SkillPowerMaster_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-    VirtualInvokeData _4_Validate;
-};
-struct CaravanWa_Shared_MasterTable_SkillPowerMaster_c {
-    Il2CppClass_1 _1;
-    void* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    CaravanWa_Shared_MasterTable_SkillPowerMaster_VTable vtable;
-};
-struct CaravanWa_Shared_MasterTable_SkillPowerMaster_o {
-    CaravanWa_Shared_MasterTable_SkillPowerMaster_c* klass;
-    MonitorData* monitor;
-    CaravanWa_Shared_MasterTable_SkillPowerMaster_Fields fields;
-};
-struct __declspec(align(8)) BattleLogic_BattleLogic_Fields {
-    struct System_Collections_Generic_IList_IBattleMatch__o* _matches;
-    struct BattleLogic_ITimer_o* _timer;
-    struct Network_LogicTimeSpan_o _startedTimeSpan;
-    struct Network_BattleFunctionalStatus_o* FunctionalStatus;
-    struct BattleLogic_StatusEffectIdNumberingService_o* StatusEffectIdNumberingService;
-    struct BattleLogic_BattleLogicReferee_o* Referee;
-    struct BattleLogic_BattleObjectEventAggregator_o* EventAggregator;
-    struct BattleLogic_Inputs_IBattleInputReceiver_o* InputReceiver;
-    struct BattleLogic_BattleObjectCreator_o* ObjectCreator;
-    struct BattleLogic_IBattleBehaviorCreator_o* BehaviorCreator;
-    struct BattleLogic_BattleLogicResult_o* _Result_k__BackingField;
-    bool _IsRetired_k__BackingField;
-    struct Network_BattleObjectId_o _lastId;
-    bool _IsTrainingMatch_k__BackingField;
-    bool _DebugStopUseSkillAuto_k__BackingField;
-    bool _CanUseSpecialSkillAnytime_k__BackingField;
-    bool _IgnoreDamage_k__BackingField;
-    int64_t QuestCode;
-};
-struct BattleLogic_BattleLogic_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-};
-struct BattleLogic_BattleLogic_c {
-    Il2CppClass_1 _1;
-    struct BattleLogic_BattleLogic_StaticFields* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    BattleLogic_BattleLogic_VTable vtable;
-};
-struct BattleLogic_BattleLogic_o {
-    BattleLogic_BattleLogic_c* klass;
-    void* monitor;
-    BattleLogic_BattleLogic_Fields fields;
-};
-struct BattleLogic_BattleLogic_StaticFields {
-    bool _DebugUnlockRankSkills_k__BackingField;
-};
-struct __declspec(align(8)) BattleLogic_BattleLogicTimer_Fields {
-    int64_t _startedAt;
-    int64_t _lastTickCount;
-    struct Network_LogicTimeSpan_o _now;
-    bool _isOsPaused;
-    int32_t _pauseCount;
-    int64_t _pausedAt;
-    int64_t _totalStopTickCount;
-    float _timeScale;
-    int64_t _timeScaledAt;
-    int64_t _totalOffsetTickCount;
-    bool _isTimeScalePause;
-};
-struct BattleLogic_BattleLogicTimer_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-    VirtualInvokeData _4_unknown;
-    VirtualInvokeData _5_unknown;
-    VirtualInvokeData _6_get_IsPauseStartTickCount;
-    VirtualInvokeData _7_unknown;
-    VirtualInvokeData _8_OnApllicationPauseInBattleLogic;
-    VirtualInvokeData _9_unknown;
-    VirtualInvokeData _10_unknown;
-    VirtualInvokeData _11_get_TimeScale;
-    VirtualInvokeData _12_unknown;
-    VirtualInvokeData _13_get_IsPause;
-    VirtualInvokeData _14_get_Now;
-    VirtualInvokeData _15_UpdateTimer;
-    VirtualInvokeData _16_Pause;
-    VirtualInvokeData _17_Resume;
-    VirtualInvokeData _18_SetTimeScale;
-};
-struct BattleLogic_BattleLogicTimer_c {
-    Il2CppClass_1 _1;
-    void* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    BattleLogic_BattleLogicTimer_VTable vtable;
-};
-struct BattleLogic_BattleLogicTimer_o {
-    BattleLogic_BattleLogicTimer_c* klass;
-    void* monitor;
-    BattleLogic_BattleLogicTimer_Fields fields;
-};
-struct BattleLogic_BattleLogicSimulateTimer_Fields : BattleLogic_BattleLogicTimer_Fields {
-    struct Network_LogicTimeSpan_o _now;
-    double _elapsedTime;
-    int32_t _pauseCount;
-    float _timeScale;
-};
-struct BattleLogic_BattleLogicSimulateTimer_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-    VirtualInvokeData _4_unknown;
-    VirtualInvokeData _5_unknown;
-    VirtualInvokeData _6_get_IsPauseStartTickCount;
-    VirtualInvokeData _7_unknown;
-    VirtualInvokeData _8_OnApllicationPauseInBattleLogic;
-    VirtualInvokeData _9_unknown;
-    VirtualInvokeData _10_unknown;
-    VirtualInvokeData _11_get_TimeScale;
-    VirtualInvokeData _12_unknown;
-    VirtualInvokeData _13_get_IsPause;
-    VirtualInvokeData _14_get_Now;
-    VirtualInvokeData _15_UpdateTimer;
-    VirtualInvokeData _16_Pause;
-    VirtualInvokeData _17_Resume;
-    VirtualInvokeData _18_SetTimeScale;
-};
-struct BattleLogic_BattleLogicSimulateTimer_c {
-    Il2CppClass_1 _1;
-    void* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    BattleLogic_BattleLogicSimulateTimer_VTable vtable;
-};
-struct BattleLogic_BattleLogicSimulateTimer_o {
-    BattleLogic_BattleLogicSimulateTimer_c* klass;
-    void* monitor;
-    BattleLogic_BattleLogicSimulateTimer_Fields fields;
-};
-
-struct UnityEngine_EventSystems_EventSystem_Fields {
-    struct UnityEngine_EventSystems_UIBehaviour_Fields;
-    struct System_Collections_Generic_List_BaseInputModule__o* m_SystemInputModules;
-    struct UnityEngine_EventSystems_BaseInputModule_o* m_CurrentInputModule;
-    struct UnityEngine_GameObject_o* m_FirstSelected;
-    bool m_sendNavigationEvents;
-    int32_t m_DragThreshold;
-    struct UnityEngine_GameObject_o* m_CurrentSelected;
-    bool m_HasFocus;
-    bool m_SelectionGuard;
-    struct UnityEngine_EventSystems_BaseEventData_o* m_DummyData;
-};
-struct UnityEngine_EventSystems_EventSystem_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-    VirtualInvokeData _4_Awake;
-    VirtualInvokeData _5_OnEnable;
-    VirtualInvokeData _6_Start;
-    VirtualInvokeData _7_OnDisable;
-    VirtualInvokeData _8_OnDestroy;
-    VirtualInvokeData _9_IsActive;
-    VirtualInvokeData _10_OnRectTransformDimensionsChange;
-    VirtualInvokeData _11_OnBeforeTransformParentChanged;
-    VirtualInvokeData _12_OnTransformParentChanged;
-    VirtualInvokeData _13_OnDidApplyAnimationProperties;
-    VirtualInvokeData _14_OnCanvasGroupChanged;
-    VirtualInvokeData _15_OnCanvasHierarchyChanged;
-    VirtualInvokeData _16_IsDestroyed;
-    VirtualInvokeData _17_OnApplicationFocus;
-    VirtualInvokeData _18_Update;
-};
-struct UnityEngine_EventSystems_EventSystem_c {
-    Il2CppClass_1 _1;
-    struct UnityEngine_EventSystems_EventSystem_StaticFields* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    UnityEngine_EventSystems_EventSystem_VTable vtable;
-};
-struct UnityEngine_EventSystems_EventSystem_o {
-    UnityEngine_EventSystems_EventSystem_c* klass;
-    void* monitor;
-    UnityEngine_EventSystems_EventSystem_Fields fields;
-};
-struct UnityEngine_EventSystems_EventSystem_StaticFields {
-    struct System_Collections_Generic_List_EventSystem__o* m_EventSystems;
-    struct System_Comparison_RaycastResult__o* s_RaycastComparer;
-};
-
-struct __declspec(align(8)) BattleLogic_BattleMatch_Fields {
-    struct BattleLogic_BattleMatchSettings_o* _BattleMatchSettings_k__BackingField;
-    struct BattleLogic_BattleObjectContainer_o* _BattleObjectContainer_k__BackingField;
-    struct BattleLogic_Sequencer_o* _Sequencer_k__BackingField;
-    struct Network_MatchId_o _MatchId_k__BackingField;
-    struct BattleLogic_Referees_IBattleMatchReferee_o* _Referee_k__BackingField;
-    struct BattleLogic_BattleBehaviorManager_o* _BattleBehaviorManager_k__BackingField;
-    struct BattleLogic_AiLogicManager_o* _AiLogicManager_k__BackingField;
-    struct BattleLogic_BattleLocationManager_o* _BattleLocationManager_k__BackingField;
-    struct BattleLogic_BattleStrikeComboManager_o* _StrikeComboManager_k__BackingField;
-    bool _IsAnyonePlayingSpecialSkill_k__BackingField;
-    struct BattleLogic_MatchResult_o* _Result_k__BackingField;
-    bool _AnyPlayerReadied_k__BackingField;
-    bool _isLastMatch;
-    struct BattleLogic_ITimer_o* _timer;
-    struct Network_LogicTimeSpan_o _startedTimeSpan;
-    struct BattleLogic_BattleLogic_o* _logic;
-    struct BattleLogic_StatusEffectUpdater_o* _statusEffectUpdater;
-    struct BattleLogic_DependingStatusEffectRemover_o* _dependingStatusEffectRemover;
-    struct BattleLogic_HateRankNotifier_o* _hateRankNotifier;
-    struct BattleLogic_OnTimeSpecialPointCollector_o* _onTimeSpecialPointCollector;
-    struct BattleLogic_IReady_o* _onReady;
-};
-struct BattleLogic_BattleMatch_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-    VirtualInvokeData _4_get_BattleMatchSettings;
-    VirtualInvokeData _5_get_BattleObjectContainer;
-    VirtualInvokeData _6_get_Adapters;
-    VirtualInvokeData _7_get_Sequencer;
-    VirtualInvokeData _8_get_WaveIndex;
-    VirtualInvokeData _9_get_QuestCode;
-    VirtualInvokeData _10_get_MatchId;
-    VirtualInvokeData _11_get_Referee;
-    VirtualInvokeData _12_get_BattleBehaviorManager;
-    VirtualInvokeData _13_get_AiLogicManager;
-    VirtualInvokeData _14_get_BattleLocationManager;
-    VirtualInvokeData _15_get_StrikeComboManager;
-    VirtualInvokeData _16_get_IsAnyonePlayingSpecialSkill;
-    VirtualInvokeData _17_set_IsAnyonePlayingSpecialSkill;
-    VirtualInvokeData _18_get_Result;
-    VirtualInvokeData _19_get_ReadyToFinishMatch;
-    VirtualInvokeData _20_get_HasFinishingBlow;
-    VirtualInvokeData _21_get_CanUseSpecialSkillAnytime;
-    VirtualInvokeData _22_get_MatchTimeSpan;
-    VirtualInvokeData _23_InitializeSequencer;
-    VirtualInvokeData _24_Update;
-    VirtualInvokeData _25_JudgeBattleMatchFinished;
-    VirtualInvokeData _26_AffectSkillRecalculation;
-    VirtualInvokeData _27_JoinHumanControlObject;
-    VirtualInvokeData _28_JoinNonHumanControlObject;
-    VirtualInvokeData _29_AnalyseInitialTarget;
-    VirtualInvokeData _30_JoinEveryOne;
-    VirtualInvokeData _31_SendJoinObject;
-    VirtualInvokeData _32_LeaveSilently;
-    VirtualInvokeData _33_FindBattleObject;
-    VirtualInvokeData _34_unknown;
-    VirtualInvokeData _35_unknown;
-    VirtualInvokeData _36_ChangeAutoMode;
-    VirtualInvokeData _37_FindMainTargetObject;
-    VirtualInvokeData _38_OnRequestStartStrikeCombo;
-    VirtualInvokeData _39_OnPlayStrikeCombo;
-    VirtualInvokeData _40_OnEndedStrikeCombo;
-    VirtualInvokeData _41_SetBattleEnvironment;
-    VirtualInvokeData _42_RegisterNotifyBattleStartCommand;
-    VirtualInvokeData _43_unknown;
-    VirtualInvokeData _44_WipeEnemies;
-    VirtualInvokeData _45_unknown;
-    VirtualInvokeData _46_RegisteAndExecuteInput;
-    VirtualInvokeData _47_OnDisconnect;
-    VirtualInvokeData _48_OnReconnect;
-    VirtualInvokeData _49_unknown;
-    VirtualInvokeData _50_unknown;
-    VirtualInvokeData _51_OnExpireStatusEffects;
-    VirtualInvokeData _52_OnRemoveStatusEffectVoluntary;
-    VirtualInvokeData _53_OnNotifySkillPlaying;
-    VirtualInvokeData _54_OnAffectSkillResultReceive;
-    VirtualInvokeData _55_unknown;
-    VirtualInvokeData _56_unknown;
-    VirtualInvokeData _57_unknown;
-    VirtualInvokeData _58_DebugRequestFinishBattle;
-    VirtualInvokeData _59_DebugRequestNextWave;
-    VirtualInvokeData _60_get_Now;
-    VirtualInvokeData _61_get_IsPause;
-    VirtualInvokeData _62_get_IsPauseStartTickCount;
-    VirtualInvokeData _63_Pause;
-    VirtualInvokeData _64_OnApllicationPauseInBattleLogic;
-    VirtualInvokeData _65_Resume;
-    VirtualInvokeData _66_UpdateTimer;
-    VirtualInvokeData _67_get_TimeScale;
-    VirtualInvokeData _68_SetTimeScale;
-    VirtualInvokeData _69_OnBattleLogicReady;
-    VirtualInvokeData _70_SetMigrationCommand;
-    VirtualInvokeData _71_SetFinishBattle;
-    VirtualInvokeData _72_IsSkillPermit;
-    VirtualInvokeData _73_IsSpecialSkillPermit;
-    VirtualInvokeData _74_OnAnyPlayerReadied;
-    VirtualInvokeData _75_OnEndedSpecialSkill;
-    VirtualInvokeData _76_OnEndedSkill;
-    VirtualInvokeData _77_OnTrainingEventComplete;
-    VirtualInvokeData _78_ExecuteCommand;
-};
-struct BattleLogic_BattleMatch_c {
-    Il2CppClass_1 _1;
-    void* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    BattleLogic_BattleMatch_VTable vtable;
-};
-struct BattleLogic_BattleMatch_o {
-    BattleLogic_BattleMatch_c* klass;
-    void* monitor;
-    BattleLogic_BattleMatch_Fields fields;
-};
-struct BattleLogic_Skills_SkillPerformer_CalculatedParameters_Fields {
-    struct BattleLogic_Models_CalculatedParameterOnSkillUse_o* CasterParameter;
-    struct BattleLogic_Models_CalculatedParameterOnSkillUse_o* ReceiverParameter;
-};
-struct BattleLogic_Skills_SkillPerformer_CalculatedParameters_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-};
-struct BattleLogic_Skills_SkillPerformer_CalculatedParameters_c {
-    Il2CppClass_1 _1;
-    void* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    BattleLogic_Skills_SkillPerformer_CalculatedParameters_VTable vtable;
-};
-struct BattleLogic_Skills_SkillPerformer_CalculatedParameters_o {
-    BattleLogic_Skills_SkillPerformer_CalculatedParameters_Fields fields;
-};
-struct UnityEngine_Color32_Fields {
-    int32_t rgba;
-    uint8_t r;
-    uint8_t g;
-    uint8_t b;
-    uint8_t a;
-};
-struct UnityEngine_Color32_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-    VirtualInvokeData _4_ToString;
-};
-struct UnityEngine_Color32_c {
-    Il2CppClass_1 _1;
-    void* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    UnityEngine_Color32_VTable vtable;
-};
-struct UnityEngine_Color32_o {
-    UnityEngine_Color32_Fields fields;
-};
-struct ZenFulcrum_EmbeddedBrowser_Browser___c_StaticFields {
-    struct ZenFulcrum_EmbeddedBrowser_Browser___c_o* __9;
-    struct System_Action_string__string__o* __9__181_0;
-    struct System_Action_Texture2D__o* __9__181_1;
-    struct System_Action_JSONNode__o* __9__181_2;
-    struct System_Action_JSONNode__o* __9__181_3;
-    struct System_Action_JSONNode__o* __9__181_4;
-    struct System_Action_JSONNode__o* __9__181_5;
-    struct System_Action_o* __9__181_6;
-    struct System_Action_o* __9__181_7;
-    struct System_Action_o* __9__181_8;
-    struct System_Action_int__JSONNode__o* __9__181_9;
-    struct System_Action_string__bool__string__o* __9__181_10;
-    struct System_Action_bool__bool__o* __9__181_11;
-};
-
-
-
-struct ZenFulcrum_EmbeddedBrowser_Browser_Fields {
-    struct UnityEngine_MonoBehaviour_Fields _;
-    struct ZenFulcrum_EmbeddedBrowser_IBrowserUI_o* _uiHandler;
-    bool uiHandlerAssigned;
-    struct String* _url;
-    int32_t _width;
-    int32_t _height;
-    bool generateMipmap;
-    struct UnityEngine_Color32_o baseColor;
-    float _zoom;
-    struct System_Action_string__string__o* onConsoleMessage;
-    int32_t allowContextMenuOn;
-    int32_t newWindowAction;
-    struct ZenFulcrum_EmbeddedBrowser_INewWindowHandler_o* _NewWindowHandler_k__BackingField;
-    bool _EnableRendering_k__BackingField;
-    bool _EnableInput_k__BackingField;
-    struct ZenFulcrum_EmbeddedBrowser_CookieManager_o* _CookieManager_k__BackingField;
-    int32_t browserId;
-    int32_t unsafeBrowserId;
-    bool browserIdRequested;
-    struct UnityEngine_Texture2D_o* texture;
-    struct System_Action_Texture2D__o* afterResize;
-    bool textureIsOurs;
-    bool forceNextRender;
-    bool isPopup;
-    struct System_Collections_Generic_List_Action__o* thingsToDo;
-    struct System_Collections_Generic_List_Action__o* onloadActions;
-    struct System_Collections_Generic_List_object__o* thingsToRemember;
-    int32_t nextCallbackId;
-    struct System_Collections_Generic_Dictionary_int__Browser_JSResultFunc__o* registeredCallbacks;
-    struct ZenFulcrum_EmbeddedBrowser_BrowserNative_ReadyFunc_o* onNativeReady;
-    struct System_Action_JSONNode__o* onLoad;
-    struct System_Action_JSONNode__o* onFetch;
-    struct System_Action_JSONNode__o* onFetchError;
-    struct System_Action_JSONNode__o* onCertError;
-    struct System_Action_o* onSadTab;
-    struct System_Action_o* onTextureUpdated;
-    struct System_Action_o* onNavStateChange;
-    struct System_Action_int__JSONNode__o* onDownloadStarted;
-    struct System_Action_int__JSONNode__o* onDownloadStatus;
-    struct System_Action_string__bool__string__o* onNodeFocus;
-    struct System_Action_bool__bool__o* onBrowserFocus;
-    struct ZenFulcrum_EmbeddedBrowser_BrowserFocusState_o* focusState;
-    struct ZenFulcrum_EmbeddedBrowser_BrowserInput_o* browserInput;
-    struct ZenFulcrum_EmbeddedBrowser_Browser_o* overlay;
-    bool skipNextLoad;
-    bool loadPending;
-    struct ZenFulcrum_EmbeddedBrowser_BrowserNavState_o* navState;
-    bool newWindowHandlerSet;
-    struct ZenFulcrum_EmbeddedBrowser_INewWindowHandler_o* newWindowHandler;
-    struct ZenFulcrum_EmbeddedBrowser_DialogHandler_o* dialogHandler;
-    struct System_Action_o* pageReplacer;
-    float pageReplacerPriority;
-    struct System_Collections_Generic_List_Action__o* thingsToDoClone;
-    struct UnityEngine_Color32_array* colorBuffer;
-};
-struct ZenFulcrum_EmbeddedBrowser_Browser_VTable {
-    VirtualInvokeData _0_Equals;
-    VirtualInvokeData _1_Finalize;
-    VirtualInvokeData _2_GetHashCode;
-    VirtualInvokeData _3_ToString;
-};
-struct ZenFulcrum_EmbeddedBrowser_Browser_c {
-    Il2CppClass_1 _1;
-    struct ZenFulcrum_EmbeddedBrowser_Browser_StaticFields* static_fields;
-    Il2CppRGCTXData* rgctx_data;
-    Il2CppClass_2 _2;
-    ZenFulcrum_EmbeddedBrowser_Browser_VTable vtable;
-};
-struct ZenFulcrum_EmbeddedBrowser_Browser {
-    ZenFulcrum_EmbeddedBrowser_Browser_c* klass;
-    MonitorData* monitor;
-    ZenFulcrum_EmbeddedBrowser_Browser_Fields fields;
-};
-struct ZenFulcrum_EmbeddedBrowser_Browser_StaticFields {
-    int32_t lastUpdateFrame;
-    struct System_Collections_Generic_Dictionary_int__List_object___o* allThingsToRemember;
-    struct System_Action_Browser__o* onAnyBrowserCreated;
-    struct System_Action_Browser__o* onAnyBrowserDestroyed;
-    struct System_Collections_Generic_Dictionary_int__Browser__o* allBrowsers;
-};
 #endif // IL2CPP_TYPES_H
