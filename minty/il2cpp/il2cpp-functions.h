@@ -18,83 +18,91 @@ DO_APP_FUNC(0x024E4CF0,  void, EventSystem_Update, ( app::UnityEngine_EventSyste
 
 
 //UnityEngine.UI.Text$$
-DO_APP_FUNC(0x022dcc00, void, Text_set_text, (app::Text* __this, app::String* value));
-////UnityEngine.UI.Text$$set_text
-//DO_APP_FUNC(0x0, void, Text_set_alignment, (app::Text* __this, app::TextAnchor__Enum value));
-//DO_APP_FUNC(0x0, void, Text_set_horizontalOverflow, (app::Text* __this, app::HorizontalWrapMode__Enum value));
-//DO_APP_FUNC(0x0, void, Text_set_verticalOverflow, (app::Text* __this, app::VerticalWrapMode__Enum value));
-//DO_APP_FUNC(0x0, void, Text_set_resizeTextForBestFit, (app::Text* __this, bool value));
-//DO_APP_FUNC(0x0, void, Text_set_fontSize, (app::Text* __this, int32_t value));
-////UnityEngine.UI.Slider
-//DO_APP_FUNC(0x0, void, Slider_1_set_minValue, (app::Slider_1* __this, float value));
-//DO_APP_FUNC(0x0, void, Slider_1_set_maxValue, (app::Slider_1* __this, float value));
-//DO_APP_FUNC(0x0, void, Slider_1_set_value, (app::Slider_1* __this, float value));
+//DO_APP_FUNC(0x022dcc00, void, Text_set_text, (app::Text* __this, app::String* value));
+//////UnityEngine.UI.Text$$set_text
+//DO_APP_FUNC(0x024DD020, void, Text_set_alignment, (app::Text* __this, app::TextAnchor__Enum value));
+//DO_APP_FUNC(0x024DD270, void, Text_set_horizontalOverflow, (app::Text* __this, app::HorizontalWrapMode__Enum value));
+//DO_APP_FUNC(0x024DD5A0, void, Text_set_verticalOverflow, (app::Text* __this, app::VerticalWrapMode__Enum value));
+//DO_APP_FUNC(0x024DD330, void, Text_set_resizeTextForBestFit, (app::Text* __this, bool value));
+//DO_APP_FUNC(0x024DD090, void, Text_set_fontSize, (app::Text* __this, int32_t value));
+//UnityEngine.UI.Slider
+//DO_APP_FUNC(0x024DA1B0, void, Slider_set_minValue, (app::Slider_1* __this, float value));
+//DO_APP_FUNC(0x024D9EA0, void, Slider_set_maxValue, (app::Slider_1* __this, float value));
+//DO_APP_FUNC(0x024DA290, void, Slider_set_value, (app::Slider_1* __this, float value));
 
-//DO_APP_FUNC(0x0, float, MoleMole_SafeFloat_get_Value, (app::SafeFloat safeFloat));
-//DO_APP_FUNC(0x0, app::SafeFloat, MoleMole_SafeFloat_set_Value, (float value));
+
 
 //System.Runtime.InteropServices.Marshal$$PtrToStringAnsi
-DO_APP_FUNC(0x01dec080, app::String*, Marshal_PtrToStringAnsi, (void* ptr));
+DO_APP_FUNC(0x0183C260, app::String*, Marshal_PtrToStringAnsi, (void* ptr));
 
 
-//UnityEngine.UI.ScrollRect$$GetBounds
-//DO_APP_FUNC(0x0, app::Bounds, GetBounds, (app::GameObject* target));
+
 
 // Game Object, Transform, Object, Component Utility
 
 //public sealed class GameObject :
 //UnityEngine.GameObject$$CreatePrimitive
-DO_APP_FUNC(0x03beafb0, app::GameObject*, GameObject_CreatePrimitive, (app::PrimitiveType__Enum type));
+DO_APP_FUNC(0x0223A220, app::GameObject*, GameObject_CreatePrimitive, (app::PrimitiveType__Enum type));
 //UnityEngine.GameObject$$get_active
-DO_APP_FUNC(0x03bebc30, bool, GameObject_get_active, (app::GameObject* __this));
+DO_APP_FUNC(0x0223B110, bool, GameObject_get_active, (app::GameObject* __this));
 //UnityEngine.GameObject$$SetActive
-DO_APP_FUNC(0x03bebce0, void, GameObject_SetActive, (app::GameObject* __this, bool value));
+DO_APP_FUNC(0x0223B370 ,void, GameObject_SetActive, (app::GameObject* __this, bool value));
 //UnityEngine.GameObject$$Find
-DO_APP_FUNC(0x03bec5b0, app::GameObject*, GameObject_Find, (app::String* name));
+DO_APP_FUNC(0x0223A2E0, app::GameObject*, GameObject_Find, (app::String* name));
 
-DO_APP_FUNC(0x03beb0d0, app::Component*, GameObject_GetComponentByName, (app::GameObject* __this, app::String* className));
+DO_APP_FUNC(0x0223A320, app::Component*, GameObject_GetComponentByName, (app::GameObject* __this, app::String* className));
 //UnityEngine.GameObject$$GetComponentByName
-DO_APP_FUNC(0x03beba70,app::Component*, GameObject_AddComponentInternal, (app::GameObject* __this, app::String* className));
+DO_APP_FUNC(0x02239FB0, app::Component*, GameObject_AddComponentInternal, (app::GameObject* __this, app::String* className));
 //UnityEngine.GameObject$$AddComponentInternal
 
 //UnityEngine.GameObject$$get_transform
-DO_APP_FUNC(0x03bebb30, app::Transform*, GameObject_get_transform, (app::GameObject* __this));
+DO_APP_FUNC(0x0223B330, app::Transform*, GameObject_get_transform, (app::GameObject* __this));
 
 
 
-DO_APP_FUNC(0x04791730, app::Transform*, Transform_GetChild, (app::Transform* __this, int32_t index));
+DO_APP_FUNC(0x022718B0, app::Transform*, Transform_GetChild, (app::Transform* __this, int32_t index));
 //UnityEngine.Transform$$GetChild
 // 
-DO_APP_FUNC(0x04791790, int32_t, Transform_GetChildCount, (app::Transform* __this));
+DO_APP_FUNC(0x02271870, int32_t, Transform_GetChildCount, (app::Transform* __this));
 //UnityEngine.Transform$$GetChildCount
 
 //UnityEngine.Transform$$FindChild
-DO_APP_FUNC(0x04791380, app::Transform*, Transform_FindChild, (app::Transform* __this, app::String* name));
+DO_APP_FUNC(0x02271770, app::Transform*, Transform_FindChild, (app::Transform* __this, app::String* name));
 
-DO_APP_FUNC(0x0478e3a0, void, Transform_set_localPosition, (app::Transform* __this, app::Vector3 value));
-DO_APP_FUNC(0x0478eff0, void, Transform_set_localRotation, (app::Transform* __this, app::Quaternion value));
-DO_APP_FUNC(0x0478f100, app::Vector3, Transform_get_localScale, (app::Transform* __this));
-DO_APP_FUNC(0x0478f170, void, Transform_set_localScale, (app::Transform* __this, app::Vector3 value));
-DO_APP_FUNC(0x0478e8b0, app::Vector3, Transform_get_right, (app::Transform* __this));
-DO_APP_FUNC(0x0478eab0, app::Vector3, Transform_get_up, (app::Transform* __this));
-DO_APP_FUNC(0x0478ecb0, app::Vector3, Transform_get_forward, (app::Transform* __this));
-DO_APP_FUNC(0x0478e260, app::Vector3, Transform_get_position, (app::Transform* __this));
-DO_APP_FUNC(0x0478e2d0, void, Transform_set_position, (app::Transform* __this, app::Vector3 value));
-DO_APP_FUNC(0x0478eeb0, app::Quaternion, Transform_get_rotation, (app::Transform* __this));
-DO_APP_FUNC(0x0478ef20, void, Transform_set_rotation, (app::Transform* __this, app::Quaternion value));
-DO_APP_FUNC(0x0478f1d0, app::Transform*, Transform_get_parent, (app::Transform* __this));
-DO_APP_FUNC(0x0478f220, void, Transform_set_parent, (app::Transform* __this, app::Transform* value));
-DO_APP_FUNC(0x0478f760, void, Transform_Translate, (app::Transform* __this, app::Vector3 translation));
+DO_APP_FUNC(0x02274CE0, void, Transform_set_localPosition, (app::Transform* __this, app::Vector3 value));
+DO_APP_FUNC(0x02274400, app::Vector3, Transform_get_localPosition, (app::Transform* __this, app::MethodInfo* method));
+
+DO_APP_FUNC(0x02274D80, void, Transform_set_localRotation, (app::Transform* __this, app::Quaternion value));
+DO_APP_FUNC(0x022744A0, app::Quaternion, Transform_get_localRotation, (app::Transform* __this, app::MethodInfo* method));
+
+
+DO_APP_FUNC(0x02274540, app::Vector3, Transform_get_localScale, (app::Transform* __this));
+DO_APP_FUNC(0x02274E20, void, Transform_set_localScale, (app::Transform* __this, app::Vector3 value));
+
+DO_APP_FUNC(0x02274780, app::Vector3, Transform_get_right, (app::Transform* __this));
+DO_APP_FUNC(0x022748F0, app::Vector3, Transform_get_up, (app::Transform* __this));
+DO_APP_FUNC(0x02274150, app::Vector3, Transform_get_forward, (app::Transform* __this));
+
+DO_APP_FUNC(0x02274730, app::Vector3, Transform_get_position, (app::Transform* __this));
+DO_APP_FUNC(0x02274F80, void, Transform_set_position, (app::Transform* __this, app::Vector3 value));
+
+DO_APP_FUNC(0x022748A0, app::Quaternion, Transform_get_rotation, (app::Transform* __this));
+DO_APP_FUNC(0x022750D0, void, Transform_set_rotation, (app::Transform* __this, app::Quaternion value));
+
+DO_APP_FUNC(0x02271A80, app::Transform*, Transform_get_parent, (app::Transform* __this));
+DO_APP_FUNC(0x02274E70, void, Transform_set_parent, (app::Transform* __this, app::Transform* value));
+
+DO_APP_FUNC(0x02273D60, void, Transform_Translate, (app::Transform* __this, app::Vector3 translation));
 ////UnityEngine.Object$$get_name
-DO_APP_FUNC(0x01dbbc60, app::String*, Object_get_name, (app::Object* __this));
+DO_APP_FUNC(0x02240280, app::String*, Object_get_name, (app::Object* __this));
 ////UnityEngine.Object$$DestroyImmediate
-DO_APP_FUNC(0x01dbcb00, void, Object_DestroyImmediate_1, (app::Object* obj));
+DO_APP_FUNC(0x0223E170, void, Object_1_DestroyImmediate_1, (app::Object* obj));
 ////UnityEngine.Component$$get_gameObject
-DO_APP_FUNC(0x020503a0, app::GameObject*, Component_get_gameObject, (app::Component* __this));
+DO_APP_FUNC(0x02236900, app::GameObject*, Component_get_gameObject, (app::Component* __this));
 
 
 // UnityEngine.RenderSettings$$set_fog
-DO_APP_FUNC(0x03ae3ca0, void, RenderSettings_set_fog, (bool value));
+DO_APP_FUNC(0x02211810, void, RenderSettings_set_fog, (bool value));
 //public static void set_fog(bool value) { }
 
 //public class Time
