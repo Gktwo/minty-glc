@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{04B17470-CB82-4724-904B-25445926AB86}</ProjectGuid>
+    <RootNamespace>minty</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>minty</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Administrator\Documents\GitHub\M\minty\Discord SDK\src;C:\Users\Administrator\Documents\GitHub\M\minty\Discord SDK\include;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Administrator\Documents\GitHub\M\minty\Discord SDK\src;C:\Users\Administrator\Documents\GitHub\M\minty\Discord SDK\include;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <PreprocessorDefinitions>_DEBUG;_CRT_SECURE_NO_WARNINGS;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>d3d11.lib;dxgi.lib;lua53.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)/api/lua;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <PreprocessorDefinitions>NDEBUG;_CRT_SECURE_NO_WARNINGS;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>d3d11.lib;dxgi.lib;lua53.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(projectDir)/api/lua;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AssemblyDebug>true</AssemblyDebug>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Functions\Debug\debug.cpp" />
+    <ClCompile Include="Functions\Debug\Engine.cpp" />
+    <ClCompile Include="Functions\Player\GodMode.cpp" />
+    <ClCompile Include="functions\settings\Settings.cpp" />
+    <ClCompile Include="api\discord\src\connection_win.cpp" />
+    <ClCompile Include="api\discord\src\discord_register_win.cpp" />
+    <ClCompile Include="api\discord\src\discord_rpc.cpp" />
+    <ClCompile Include="api\discord\src\rpc_connection.cpp" />
+    <ClCompile Include="api\discord\src\serialization.cpp" />
+    <ClCompile Include="functions\about\About.cpp" />
+    <ClCompile Include="Functions\visuals\browser.cpp" />
+    <ClCompile Include="Functions\visuals\HideUI.cpp" />
+    <ClCompile Include="Functions\visuals\UnlockFPS.cpp" />
+    <ClCompile Include="Functions\World\SetTimeScale.cpp" />
+    <ClCompile Include="GUI\ResourceLoader.cpp" />
+    <ClCompile Include="GUI\mutil.cpp" />
+    <ClCompile Include="il2cpp\il2cppUtils.cpp" />
+    <ClCompile Include="gui\MainGUI.cpp" />
+    <ClCompile Include="gui\Translations.cpp" />
+    <ClCompile Include="hotkeys\Hotkey.cpp" />
+    <ClCompile Include="hotkeys\KeyBind.cpp" />
+    <ClCompile Include="api\imgui\ImGui\imgui_stdlib.cpp" />
+    <ClCompile Include="utils\discordrpc\Discord.cpp" />
+    <ClCompile Include="utils\GuiUtils.cpp" />
+    <ClCompile Include="utils\image\ImageLoader.cpp" />
+    <ClCompile Include="utils\Logger.cpp" />
+    <ClCompile Include="utils\LuaUtils.cpp" />
+    <ClCompile Include="utils\ProtectionBypass.cpp" />
+    <ClCompile Include="utils\util.cpp" />
+    <ClInclude Include="api\magic_enum\magic_enum.hpp" />
+    <ClInclude Include="config\ConfigField.h" />
+    <ClInclude Include="config\ConfigManager.h" />
+    <ClInclude Include="Functions\Debug\debug.h" />
+    <ClInclude Include="Functions\Debug\Engine.h" />
+    <ClInclude Include="Functions\Debug\EngineFunc.hpp" />
+    <ClInclude Include="Functions\Debug\EngineUtils.hpp" />
+    <ClInclude Include="functions\FunctionIncludes.h" />
+    <ClInclude Include="Functions\Player\GodMode.h" />
+    <ClInclude Include="functions\settings\Settings.h" />
+    <ClCompile Include="config\ConfigManager.cpp">
+      <FileType>CppHeader</FileType>
+    </ClCompile>
+    <ClCompile Include="api\directx\D3D11Hook.cpp">
+      <FileType>CppHeader</FileType>
+    </ClCompile>
+    <ClInclude Include="api\directx\D3D11Hook.hpp" />
+    <ClInclude Include="api\discord\include\discord_register.h" />
+    <ClInclude Include="api\discord\include\discord_rpc.h" />
+    <ClInclude Include="api\discord\src\backoff.h" />
+    <ClInclude Include="api\discord\src\connection.h" />
+    <ClInclude Include="api\discord\src\msg_queue.h" />
+    <ClInclude Include="api\discord\src\rapidjson\allocators.h" />
+    <ClInclude Include="api\discord\src\rapidjson\cursorstreamwrapper.h" />
+    <ClInclude Include="api\discord\src\rapidjson\document.h" />
+    <ClInclude Include="api\discord\src\rapidjson\encodedstream.h" />
+    <ClInclude Include="api\discord\src\rapidjson\encodings.h" />
+    <ClInclude Include="api\discord\src\rapidjson\filereadstream.h" />
+    <ClInclude Include="api\discord\src\rapidjson\filewritestream.h" />
+    <ClInclude Include="api\discord\src\rapidjson\fwd.h" />
+    <ClInclude Include="api\discord\src\rapidjson\istreamwrapper.h" />
+    <ClInclude Include="api\discord\src\rapidjson\memorybuffer.h" />
+    <ClInclude Include="api\discord\src\rapidjson\memorystream.h" />
+    <ClInclude Include="api\discord\src\rapidjson\ostreamwrapper.h" />
+    <ClInclude Include="api\discord\src\rapidjson\pointer.h" />
+    <ClInclude Include="api\discord\src\rapidjson\prettywriter.h" />
+    <ClInclude Include="api\discord\src\rapidjson\rapidjson.h" />
+    <ClInclude Include="api\discord\src\rapidjson\reader.h" />
+    <ClInclude Include="api\discord\src\rapidjson\schema.h" />
+    <ClInclude Include="api\discord\src\rapidjson\stream.h" />
+    <ClInclude Include="api\discord\src\rapidjson\stringbuffer.h" />
+    <ClInclude Include="api\discord\src\rapidjson\writer.h" />
+    <ClInclude Include="api\discord\src\rpc_connection.h" />
+    <ClInclude Include="api\discord\src\serialization.h" />
+    <ClInclude Include="functions\about\About.h" />
+    <ClInclude Include="Functions\visuals\browser.h" />
+    <ClInclude Include="Functions\visuals\HideUI.h" />
+    <ClInclude Include="Functions\visuals\UnlockFPS.h" />
+    <ClInclude Include="Functions\World\SetTimeScale.h" />
+    <ClInclude Include="GUI\ResourceLoader.h" />
+    <ClInclude Include="GUI\mutil.h" />
+    <ClInclude Include="il2cpp\detours.h" />
+    <ClInclude Include="functions\Function.h" />
+    <ClInclude Include="il2cpp\HookManager.h" />
+    <ClInclude Include="il2cpp\il2cpp-api-functions.h" />
+    <ClInclude Include="il2cpp\il2cpp-appdata.h" />
+    <ClInclude Include="il2cpp\il2cpp-enum.h" />
+    <ClInclude Include="il2cpp\il2cpp-functions.h" />
+    <ClInclude Include="il2cpp\il2cpp-init.hpp" />
+    <ClInclude Include="il2cpp\il2cpp-types-ptr.h" />
+    <ClInclude Include="il2cpp\il2cpp-types.h" />
+    <ClInclude Include="il2cpp\il2cpp-unityplayer-functions.h" />
+    <ClInclude Include="il2cpp\il2cppUtils.h" />
+    <ClInclude Include="games\lightsout.hpp" />
+    <ClInclude Include="games\minesweeper.hpp" />
+    <ClInclude Include="games\tictactoe.hpp" />
+    <ClInclude Include="games\wordle.hpp" />
+    <ClInclude Include="gui\GuiDefinitions.h" />
+    <ClInclude Include="gui\InitGui.h" />
+    <ClCompile Include="gui\Sections.cpp" />
+    <ClInclude Include="gui\Sections.h" />
+    <ClInclude Include="gui\Translations.h" />
+    <ClInclude Include="hotkeys\Hotkey.h" />
+    <ClInclude Include="hotkeys\KeyBind.h" />
+    <ClCompile Include="api\imgui\ImGui\imgui.cpp" />
+    <ClCompile Include="api\imgui\ImGui\imgui_demo.cpp" />
+    <ClCompile Include="api\imgui\ImGui\imgui_draw.cpp" />
+    <ClCompile Include="api\imgui\ImGui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="api\imgui\ImGui\imgui_impl_win32.cpp" />
+    <ClCompile Include="api\imgui\ImGui\imgui_tables.cpp" />
+    <ClCompile Include="api\imgui\ImGui\imgui_widgets.cpp" />
+    <ClCompile Include="api\imgui\TextEditor\TextEditor.cpp" />
+    <ClCompile Include="api\lua\lapi.c" />
+    <ClCompile Include="api\lua\lauxlib.c" />
+    <ClCompile Include="api\lua\lbaselib.c" />
+    <ClCompile Include="api\lua\lbitlib.c" />
+    <ClCompile Include="api\lua\lcode.c" />
+    <ClCompile Include="api\lua\lcorolib.c" />
+    <ClCompile Include="api\lua\lctype.c" />
+    <ClCompile Include="api\lua\ldblib.c" />
+    <ClCompile Include="api\lua\ldebug.c" />
+    <ClCompile Include="api\lua\ldo.c" />
+    <ClCompile Include="api\lua\ldump.c" />
+    <ClCompile Include="api\lua\lfunc.c" />
+    <ClCompile Include="api\lua\lgc.c" />
+    <ClCompile Include="api\lua\linit.c" />
+    <ClCompile Include="api\lua\liolib.c" />
+    <ClCompile Include="api\lua\llex.c" />
+    <ClCompile Include="api\lua\lmathlib.c" />
+    <ClCompile Include="api\lua\lmem.c" />
+    <ClCompile Include="api\lua\loadlib.c" />
+    <ClCompile Include="api\lua\lobject.c" />
+    <ClCompile Include="api\lua\lopcodes.c" />
+    <ClCompile Include="api\lua\loslib.c" />
+    <ClCompile Include="api\lua\lparser.c" />
+    <ClCompile Include="api\lua\lstate.c" />
+    <ClCompile Include="api\lua\lstring.c" />
+    <ClCompile Include="api\lua\lstrlib.c" />
+    <ClCompile Include="api\lua\ltable.c" />
+    <ClCompile Include="api\lua\ltablib.c" />
+    <ClCompile Include="api\lua\ltm.c" />
+    <ClCompile Include="api\lua\lua.c" />
+    <ClCompile Include="api\lua\lundump.c" />
+    <ClCompile Include="api\lua\lutf8lib.c" />
+    <ClCompile Include="api\lua\lvm.c" />
+    <ClCompile Include="api\lua\lzio.c" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="gui\InitGui.cpp">
+      <FileType>CppHeader</FileType>
+    </ClCompile>
+    <ClInclude Include="api\imgui\ImGui\imgui_stdlib.h" />
+    <ClInclude Include="api\lua\function.h" />
+    <ClInclude Include="api\lua\lapi.h" />
+    <ClInclude Include="api\lua\lcode.h" />
+    <ClInclude Include="api\lua\lctype.h" />
+    <ClInclude Include="api\lua\ldebug.h" />
+    <ClInclude Include="api\lua\ldo.h" />
+    <ClInclude Include="api\lua\lfunc.h" />
+    <ClInclude Include="api\lua\lgc.h" />
+    <ClInclude Include="api\lua\llex.h" />
+    <ClInclude Include="api\lua\llimits.h" />
+    <ClInclude Include="api\lua\lmem.h" />
+    <ClInclude Include="api\lua\lobject.h" />
+    <ClInclude Include="api\lua\lopcodes.h" />
+    <ClInclude Include="api\lua\lparser.h" />
+    <ClInclude Include="api\lua\lstate.h" />
+    <ClInclude Include="api\lua\lstring.h" />
+    <ClInclude Include="api\lua\ltable.h" />
+    <ClInclude Include="api\lua\ltm.h" />
+    <ClInclude Include="api\lua\lua.hpp" />
+    <ClInclude Include="api\lua\luahook.hpp" />
+    <ClInclude Include="api\lua\lundump.h" />
+    <ClInclude Include="api\lua\lvm.h" />
+    <ClInclude Include="api\lua\lzio.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="themes\fonts\FontsLoader.h" />
+    <ClCompile Include="api\lua\luahook.cpp">
+      <FileType>CppHeader</FileType>
+    </ClCompile>
+    <ClInclude Include="themes\ThemeLoader.h" />
+    <ClCompile Include="themes\Themes.cpp">
+      <FileType>CppHeader</FileType>
+    </ClCompile>
+    <ClInclude Include="themes\Themes.h" />
+    <ClInclude Include="utils\discordrpc\Discord.h" />
+    <ClInclude Include="utils\GuiUtils.h" />
+    <ClInclude Include="utils\image\ImageLoader.h" />
+    <ClInclude Include="utils\image\stb_image.h" />
+    <ClInclude Include="utils\Logger.h" />
+    <ClInclude Include="utils\LuaUtils.h" />
+    <ClInclude Include="utils\ProtectionBypass.h" />
+    <ClInclude Include="utils\util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="games\lightsout.cpp">
+      <FileType>CppHeader</FileType>
+    </ClCompile>
+    <ClCompile Include="games\minesweeper.cpp">
+      <FileType>CppHeader</FileType>
+    </ClCompile>
+    <ClCompile Include="games\tictactoe.cpp">
+      <FileType>CppHeader</FileType>
+    </ClCompile>
+    <ClCompile Include="games\wordle.cpp">
+      <FileType>CppHeader</FileType>
+    </ClCompile>
+    <ClInclude Include="gui\MainGUI.h" />
+    <ClInclude Include="api\imgui\ImGuiNotify\fa_solid_900.h" />
+    <ClInclude Include="api\imgui\ImGuiNotify\font_awesome_5.h" />
+    <ClInclude Include="api\imgui\ImGuiNotify\imgui_notify.h" />
+    <ClInclude Include="api\imgui\ImGuiNotify\tahoma.h" />
+    <ClInclude Include="api\imgui\ImGui\imconfig.h" />
+    <ClInclude Include="api\imgui\ImGui\imgui.h" />
+    <ClInclude Include="api\imgui\ImGui\imgui_impl_dx11.h" />
+    <ClInclude Include="api\imgui\ImGui\imgui_impl_win32.h" />
+    <ClInclude Include="api\imgui\ImGui\imgui_internal.h" />
+    <ClInclude Include="api\imgui\ImGui\imstb_rectpack.h" />
+    <ClInclude Include="api\imgui\ImGui\imstb_textedit.h" />
+    <ClInclude Include="api\imgui\ImGui\imstb_truetype.h" />
+    <ClInclude Include="api\imgui\TextEditor\TextEditor.h" />
+    <ClInclude Include="includes.h" />
+    <ClInclude Include="api\json\json.hpp" />
+    <ClInclude Include="api\lua\lauxlib.h" />
+    <ClInclude Include="api\lua\lprefix.h" />
+    <ClInclude Include="api\lua\lua.h" />
+    <ClInclude Include="api\lua\luaconf.h" />
+    <ClInclude Include="api\lua\lualib.h" />
+    <ClInclude Include="api\lua\pe.h" />
+    <ClInclude Include="api\lua\scanner.h" />
+    <ClCompile Include="themes\fonts\FontsLoader.cpp">
+      <FileType>CppHeader</FileType>
+    </ClCompile>
+    <ClCompile Include="themes\ThemeLoader.cpp">
+      <FileType>CppHeader</FileType>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="api\lua\lua53.lib" />
+    <Library Include="il2cpp\detours.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="gato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="themes\fonts\m-n.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="minty.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="api\lua\lua53.dll" />
+    <None Include="resources\translations.json" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties resources_4translations_1json__JsonSchema="https://download.stackhawk.com/hawk/jsonschema/hawkconfig.json" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
