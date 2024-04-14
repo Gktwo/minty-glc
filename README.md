@@ -5,6 +5,7 @@ A Magic of Guilongchao
 
 - UnlockFPS
 - Gamespeed
+- FreeCamera
 
 ## Game version
 [China](https://glc.haowancheng.cn/index/)
