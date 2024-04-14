@@ -81,6 +81,7 @@
     <ClCompile Include="Functions\visuals\UnlockFPS.cpp" />
     <ClCompile Include="Functions\World\SetTimeScale.cpp" />
     <ClCompile Include="Functions\Debug\debug.cpp" />
+    <ClCompile Include="Functions\visuals\freecamera.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="gui\MainGUI.h" />
@@ -203,6 +204,7 @@
     <ClInclude Include="Functions\World\SetTimeScale.h" />
     <ClInclude Include="Functions\Debug\debug.h" />
     <ClInclude Include="il2cpp\il2cpp-enum.h" />
+    <ClInclude Include="Functions\visuals\freecamera.h" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="api\lua\lua53.lib" />

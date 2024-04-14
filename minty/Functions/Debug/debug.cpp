@@ -22,8 +22,6 @@ namespace cheat {
 	void Debug::GUI() {
 		ImGui::SeparatorText(_("Debug"));
 
-
-
 		if (ImGui::Button("SetResolution"))
 			SetResolution();
 		ImGui::SameLine();
@@ -32,26 +30,26 @@ namespace cheat {
 		ConfigInputInt(_("Screen height"), f_Resolutionheight, _("RESOLUTION_HEIGHT_DESCRIPTION"));
 		ConfigCheckbox(_("Fullscreen"), f_Resolutionfullscreen, _("Fullscreen"));
 
-		//if (f_time.getValue()) {
-		//	ImGui::Indent();
-		//	ImGui::Unindent();
-		//}
-		//if (f_Enabled.getValue()) {
-		//	ImGui::Indent();
-		//	f_Hotkey.Draw();
-		//	ImGui::Unindent();
-		//}
+		//testdebugfunc
+		if (ImGui::Button("find cam"))
+		{
+			auto maincam = app::Camera_get_main(nullptr);
+			//auto currcam = app::Camera_get_current(nullptr);
+			LOG_DEBUG("mainCam Component %p", maincam);
+			auto maincamgobj = app::Component_get_gameObject(reinterpret_cast<app::Component_1*>(maincam));
+			auto name = app::Object_get_name(reinterpret_cast<app::Object_1*>(maincamgobj));//Main Camera
+			LOG_DEBUG("mainCam Gameobject:%s ,%p", il2cppi_to_string(name), maincamgobj);
+			app::String* findname= string_to_il2cppi("Main Camera");
+			auto findcam = app::GameObject_Find(findname);
+			LOG_DEBUG("mainCam namefindtest:%p", findcam);
+			auto maincamtr = app::GameObject_get_transform(maincamgobj);
+			LOG_DEBUG("mainCam tranform:%p", maincamtr);
+			auto CinemachineBrain = app::GameObject_GetComponentByName(maincamgobj, string_to_il2cppi("CinemachineBrain"));
+			auto CinemachineExternalCamera =app::GameObject_GetComponentByName(maincamgobj, string_to_il2cppi("CinemachineExternalCamera"));
+			LOG_DEBUG("mainCam CB:%p,CEC:%p", CinemachineBrain, CinemachineExternalCamera);
+		}
 
-		if (f_Resolution.IsPressed())
-			SetResolution();
 
-		//if (f_WipeEnemies.getValue()) {
-		//	ImGui::Indent();
-		//	ImGui::Text("Wipe:");
-		//	ImGui::SameLine();
-		//	f_Wipe.Draw();
-		//	ImGui::Unindent();
-		//}
 
 
 
@@ -63,6 +61,8 @@ namespace cheat {
 	void Debug::Outer() {
 		//if (f_Hotkey.IsPressed())
 		//	f_Enabled.setValue(!f_Enabled.getValue());
+		if (f_Resolution.IsPressed())
+			SetResolution();
 
 
 	}

@@ -166,6 +166,7 @@
     <ClCompile Include="api\discord\src\rpc_connection.cpp" />
     <ClCompile Include="api\discord\src\serialization.cpp" />
     <ClCompile Include="functions\about\About.cpp" />
+    <ClCompile Include="Functions\visuals\freecamera.cpp" />
     <ClCompile Include="Functions\visuals\UnlockFPS.cpp" />
     <ClCompile Include="Functions\World\SetTimeScale.cpp" />
     <ClCompile Include="GUI\ResourceLoader.cpp" />
@@ -224,6 +225,7 @@
     <ClInclude Include="api\discord\src\rpc_connection.h" />
     <ClInclude Include="api\discord\src\serialization.h" />
     <ClInclude Include="functions\about\About.h" />
+    <ClInclude Include="Functions\visuals\freecamera.h" />
     <ClInclude Include="Functions\visuals\UnlockFPS.h" />
     <ClInclude Include="Functions\World\SetTimeScale.h" />
     <ClInclude Include="GUI\ResourceLoader.h" />

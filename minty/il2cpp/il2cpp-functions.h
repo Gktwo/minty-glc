@@ -50,9 +50,9 @@ DO_APP_FUNC(0x0223B370 ,void, GameObject_SetActive, (app::GameObject* __this, bo
 //UnityEngine.GameObject$$Find
 DO_APP_FUNC(0x0223A2E0, app::GameObject*, GameObject_Find, (app::String* name));
 
-DO_APP_FUNC(0x0223A320, app::Component*, GameObject_GetComponentByName, (app::GameObject* __this, app::String* className));
+DO_APP_FUNC(0x0223A320, app::Component_1*, GameObject_GetComponentByName, (app::GameObject* __this, app::String* className));
 //UnityEngine.GameObject$$GetComponentByName
-DO_APP_FUNC(0x02239FB0, app::Component*, GameObject_AddComponentInternal, (app::GameObject* __this, app::String* className));
+DO_APP_FUNC(0x02239FB0, app::Component_1*, GameObject_AddComponentInternal, (app::GameObject* __this, app::String* className));
 //UnityEngine.GameObject$$AddComponentInternal
 
 //UnityEngine.GameObject$$get_transform
@@ -92,13 +92,21 @@ DO_APP_FUNC(0x022750D0, void, Transform_set_rotation, (app::Transform* __this, a
 DO_APP_FUNC(0x02271A80, app::Transform*, Transform_get_parent, (app::Transform* __this));
 DO_APP_FUNC(0x02274E70, void, Transform_set_parent, (app::Transform* __this, app::Transform* value));
 
+DO_APP_FUNC(0x02274080, app::Vector3, Transform_get_eulerAngles, (app::Transform* __this, app::MethodInfo* method));
+DO_APP_FUNC(0x02274AB0, void, Transform_set_eulerAngles, (app::Transform* __this, app::Vector3 value, app::MethodInfo* method));
+
+DO_APP_FUNC(0x022742E0, app::Vector3, Transform_get_localEulerAngles, (app::Transform* __this, app::MethodInfo* method));
+DO_APP_FUNC(0x02274C00, void, Transform_set_localEulerAngles, (app::Transform* __this, app::Vector3 value, app::MethodInfo* method));
+
+
 DO_APP_FUNC(0x02273D60, void, Transform_Translate, (app::Transform* __this, app::Vector3 translation));
 ////UnityEngine.Object$$get_name
-DO_APP_FUNC(0x02240280, app::String*, Object_get_name, (app::Object* __this));
+DO_APP_FUNC(0x02240280, app::String*, Object_get_name, (app::Object_1* __this));
 ////UnityEngine.Object$$DestroyImmediate
-DO_APP_FUNC(0x0223E170, void, Object_1_DestroyImmediate_1, (app::Object* obj));
+DO_APP_FUNC(0x0223E170, void, Object_1_DestroyImmediate_1, (app::Object_1* obj));
 ////UnityEngine.Component$$get_gameObject
-DO_APP_FUNC(0x02236900, app::GameObject*, Component_get_gameObject, (app::Component* __this));
+DO_APP_FUNC(0x02236900, app::GameObject*, Component_get_gameObject, (app::Component_1* __this));
+DO_APP_FUNC(0x0223F640, app::Object_1*, Object_1_Instantiate, (app::Object_1* original, app::Vector3 position, app::Quaternion rotation, app::MethodInfo* method));
 
 
 // UnityEngine.RenderSettings$$set_fog
@@ -138,12 +146,25 @@ DO_APP_FUNC(0x02222F40, void, Cursor_set_lockState, (app::CursorLockMode__Enum v
 DO_APP_FUNC(0x021F3860,  int32_t, Screen_get_width, (app::MethodInfo* method));
 //	 public static int get_width() { }
 DO_APP_FUNC(0x021F36C0, int32_t, Screen_get_height, (app::MethodInfo* method));
+
 //public static int get_height() { }
 DO_APP_FUNC(0x021F3360,  void, Screen_SetResolution, (int32_t width, int32_t height, bool fullscreen));
 
+//camera
+DO_APP_FUNC(0x021D15E0, void, Camera_CopyFrom, (app::Camera* __this, app::Camera* other, app::MethodInfo* method));
+DO_APP_FUNC(0x021D4230, app::Camera*, Camera_get_main, (app::MethodInfo* method));
+DO_APP_FUNC(0x021D3F20, app::Camera*, Camera_get_current, (app::MethodInfo* method));
+DO_APP_FUNC(0x021D4050, float, Camera_get_fieldOfView, (app::Camera* __this, app::MethodInfo* method));
+DO_APP_FUNC(0x021D5390, void, Camera_set_fieldOfView, (app::Camera* __this, float value, app::MethodInfo* method));
+
+DO_APP_FUNC(0x021D3710, app::Vector3, Camera_WorldToScreenPoint_1, (app::Camera* __this, app::Vector3 position, app::MethodInfo* method));
 
 
+DO_APP_FUNC(0x00570D60, float, Mathf_Lerp, (float a, float b, float t, app::MethodInfo* method));
+DO_APP_FUNC(0x0223C360, float, Mathf_LerpUnclamped, (float a, float b, float t, app::MethodInfo* method));
+DO_APP_FUNC(0x008BF470, float, Mathf_LerpAngle, (float a, float b, float t, app::MethodInfo* method));
 
+DO_APP_FUNC(0x022D2D00, float, Input_GetAxis, (app::String* axisName, app::MethodInfo* method));
 
 
 

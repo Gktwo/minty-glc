@@ -11,7 +11,7 @@
 //#include "../functions/visuals/browser.h"
 
 #include "../functions/visuals/UnlockFPS.h"
-
+#include "../functions/visuals/freecamera.h"
 
 #include "../functions/debug/Debug.h"
 
@@ -48,7 +48,7 @@ void Init() {
 	INIT_FUNC(UnlockFPS);
 	//INIT_FUNC(Browser);
 	//INIT_FUNC(NoFog);
-
+	INIT_FUNC(FreeCamera);
 
 
 
@@ -78,7 +78,7 @@ void Status() {
 	std::string version = about.mVersion;
 
 	ImGui::PushStyleColor(ImGuiCol_Text, { 0.17f, 0.63f, 0.45f, 1.00f });
-	ImGui::Text("minty");
+	ImGui::Text("minty-glc");
 	ImGui::PopStyleColor();
 	ImGui::Separator();
 	for (auto& feature : functions)

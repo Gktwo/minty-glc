@@ -2314,11 +2314,14 @@ typedef union Il2CppSingle_float
 //    double y;
 //    double z;
 //};
-
-struct Object {
-    struct Object__Class* klass;
-    MonitorData* monitor;
+struct Vector2 {
+    float x;
+    float y;
 };
+//struct Object {
+//    struct Object__Class* klass;
+//    MonitorData* monitor;
+//};
 
 struct ValueType {
     struct ValueType__Class* klass;
@@ -2597,6 +2600,107 @@ struct GameObject__Class {
     const Il2CppRGCTXData* rgctx_data;
     Il2CppClass_1 _1;
     struct GameObject__VTable vtable;
+};
+struct Camera__VTable {
+    VirtualInvokeData Equals;
+    VirtualInvokeData Finalize;
+    VirtualInvokeData GetHashCode;
+    VirtualInvokeData ToString;
+};
+
+struct Camera__StaticFields {
+    struct Camera_CameraCallback* onPreCull;
+    struct Camera_CameraCallback* onPreRender;
+    struct Camera_CameraCallback* onPostRender;
+};
+
+struct Camera__Class {
+    Il2CppClass_0 _0;
+    Il2CppRuntimeInterfaceOffsetPair* interfaceOffsets;
+    struct Camera__StaticFields* static_fields;
+    const Il2CppRGCTXData* rgctx_data;
+    Il2CppClass_1 _1;
+    struct Camera__VTable vtable;
+};
+
+struct Camera__Fields {
+    struct Behaviour__Fields _;
+};
+
+struct Camera {
+    struct Camera__Class* klass;
+    MonitorData* monitor;
+    struct Camera__Fields fields;
+};
+struct __declspec(align(8)) MarshalByRefObject__Fields {
+    struct Object* _identity;
+};
+
+struct MarshalByRefObject {
+    struct MarshalByRefObject__Class* klass;
+    MonitorData* monitor;
+    struct MarshalByRefObject__Fields fields;
+};
+struct MarshalByRefObject__VTable {
+    VirtualInvokeData Equals;
+    VirtualInvokeData Finalize;
+    VirtualInvokeData GetHashCode;
+    VirtualInvokeData ToString;
+    VirtualInvokeData CreateObjRef;
+    VirtualInvokeData InitializeLifetimeService;
+};
+
+struct MarshalByRefObject__StaticFields {
+};
+
+struct MarshalByRefObject__Class {
+    Il2CppClass_0 _0;
+    Il2CppRuntimeInterfaceOffsetPair* interfaceOffsets;
+    struct MarshalByRefObject__StaticFields* static_fields;
+    const Il2CppRGCTXData* rgctx_data;
+    Il2CppClass_1 _1;
+    struct MarshalByRefObject__VTable vtable;
+};
+struct Component_1__VTable {
+    VirtualInvokeData Equals;
+    VirtualInvokeData Finalize;
+    VirtualInvokeData GetHashCode;
+    VirtualInvokeData ToString;
+    VirtualInvokeData CreateObjRef;
+    VirtualInvokeData InitializeLifetimeService;
+    VirtualInvokeData get_Site;
+    VirtualInvokeData Dispose;
+    VirtualInvokeData get_CanRaiseEvents;
+    VirtualInvokeData add_Disposed;
+    VirtualInvokeData remove_Disposed;
+    VirtualInvokeData get_Site_1;
+    VirtualInvokeData set_Site;
+    VirtualInvokeData Dispose_1;
+    VirtualInvokeData GetService;
+};
+
+struct Component_1__StaticFields {
+    struct Object* EventDisposed;
+};
+
+struct Component_1__Class {
+    Il2CppClass_0 _0;
+    Il2CppRuntimeInterfaceOffsetPair* interfaceOffsets;
+    struct Component_1__StaticFields* static_fields;
+    const Il2CppRGCTXData* rgctx_data;
+    Il2CppClass_1 _1;
+    struct Component_1__VTable vtable;
+};
+struct Component_1__Fields {
+    struct MarshalByRefObject__Fields _;
+    struct ISite* site;
+    struct EventHandlerList* events;
+};
+
+struct Component_1 {
+    struct Component_1__Class* klass;
+    MonitorData* monitor;
+    struct Component_1__Fields fields;
 };
 
 #endif // IL2CPP_TYPES_H
